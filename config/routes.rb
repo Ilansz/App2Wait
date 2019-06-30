@@ -1,36 +1,10 @@
 Rails.application.routes.draw do
-  get 'events_levels/new'
-  get 'events_levels/create'
-  get 'events_levels/edit'
-  get 'events_levels/update'
-  get 'events_levels/destroy'
-  get 'events/index'
-  get 'events/show'
-  get 'events/new'
-  get 'events/create'
-  get 'events/edit'
-  get 'events/update'
-  get 'events/destroy'
-  get 'groups/index'
-  get 'groups/show'
-  get 'groups/new'
-  get 'groups/create'
-  get 'groups/edit'
-  get 'groups/update'
-  get 'groups/destroy'
-  get 'groups_users/new'
-  get 'groups_users/create'
-  get 'groups_users/edit'
-  get 'groups_users/update'
-  get 'groups_users/destroy'
-  get 'videos/index'
-  get 'videos/show'
-  get 'videos/new'
-  get 'videos/create'
-  get 'videos/destroy'
-  get 'challenges/index'
-  get 'challenges/show'
+
   devise_for :users
   root to: 'pages#home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :challenges, only: [:index, :show]
+  resources :events
+  resources :events_levels, only: [:new, :create, :edit, :update, :destroy]
+  resources :groups
+  resources :videos, only: [:index, :show, :new, :create, :destroy]
 end
