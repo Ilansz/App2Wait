@@ -3,5 +3,5 @@
 
 <% @videos.each do |v| %>
     <%= v.tag %>
-    <%= video_tag v.video_url.to_s, :controls =>true %>
+    <%= cl_video_tag(v.video_url.to_s, :controls => true) %>
 <% end %>
