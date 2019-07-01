@@ -4,8 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :videos
-  has_many :group_users
+  has_many :groups_users
   has_many :groups, through: :groups_users
+  has_many :owned_groups, foreign_key: "user_id", class_name: "Group"
+
 
   mount_uploader :photo, PhotoUploader
   validates :username, presence: true
