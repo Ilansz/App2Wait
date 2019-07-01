@@ -8,5 +8,5 @@ class User < ApplicationRecord
   has_many :groups, through: :groups_users
 
   mount_uploader :photo, PhotoUploader
-  validates :username, presence: true, uniqueness: true
+  validates :username, presence: true
 end
