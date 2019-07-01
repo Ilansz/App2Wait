@@ -7,5 +7,6 @@ class ChallengesController < ApplicationController
 
   def show
     @challenge = Challenge.find(params[:id])
+    @event = Event.new
   end
 end
