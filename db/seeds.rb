@@ -122,7 +122,9 @@ Challenge.create!(name: "The worm",
 Challenge.create!(name: "No phone",
                  remote_photo_url: "https://media.giphy.com/media/2yrq3JzXZWCa7x8Yrg/giphy.gif")
 
-puts "Done seeding!"
+puts "Finished generating challenges"
+
+puts "Generating Groups"
 
 Group.create(name: "ilan")
 
@@ -136,3 +138,6 @@ Group.create(name: "asterix")
 
 Group.create(name: "obelix")
 
+puts "Finished generating Groups"
+
+puts "Done seeding!"
