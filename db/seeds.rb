@@ -33,3 +33,16 @@ Challenge.create(name: "get phone numbers",
 
 Challenge.create(name: "the worm",
                  remote_photo_url: "https://media.giphy.com/media/YiJn0dXMKDkhHNXDLC/giphy.gif")
+
+Group.create(name: "ilan")
+
+Group.create(name: "axel")
+
+Group.create(name: "snoopy")
+
+Group.create(name: "scooby-doo")
+
+Group.create(name: "asterix")
+
+Group.create(name: "obelix")
+
