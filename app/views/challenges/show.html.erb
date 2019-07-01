@@ -1,3 +1,7 @@
-<h1> <%= challenge.name %> </h1>
+<h1> <%= @challenge.name %> </h1>
 
-<h4> <%= challenge.photo %> </h4>
+<p> <%= cl_image_tag @challenge.photo, height: 300, width: 400, crop: :fill %> </p>
+
+<h4> <%= link_to "groups", groups_path %> </h4>
+
+<p> <%= link_to "back", challenges_path %> </p>

@@ -1,3 +1,7 @@
 <% @challenges.each do |challenge| %>
-  <p> <%= challenge.name %> </p>
+  <p>
+    <%= link_to challenge_path(challenge), class: "btn btn-primary" do %>
+      <%= challenge.name %>
+    <% end %>
+  </p>
 <% end %>

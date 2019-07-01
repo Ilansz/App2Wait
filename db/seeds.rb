@@ -23,13 +23,13 @@
 # puts "Done seeding!"
 
 Challenge.create(name: "chicken dance",
-                 photo: "https://source.unsplash.com/random")
+                 remote_photo_url: "https://media.giphy.com/media/3o752olKiKtMfQunzW/giphy.gif")
 
 Challenge.create(name: "pushups",
-                 photo: "https://source.unsplash.com/random")
+                 remote_photo_url: "https://media.giphy.com/media/PfFtibPKBbQrK/giphy.gif")
 
 Challenge.create(name: "get phone numbers",
-                 photo: "https://source.unsplash.com/random")
+                 remote_photo_url: "https://media.giphy.com/media/11SIBu3s72Co8w/giphy.gif")
 
-Challenge.create(name: "a shot on you",
-                 photo: "https://source.unsplash.com/random")
+Challenge.create(name: "the worm",
+                 remote_photo_url: "https://media.giphy.com/media/YiJn0dXMKDkhHNXDLC/giphy.gif")
