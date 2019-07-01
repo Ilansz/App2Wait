@@ -1,6 +1,10 @@
 <h1> <%= @challenge.name %> </h1>
 
 <p> <%= cl_image_tag @challenge.photo, height: 300, width: 400, crop: :fill %> </p>
+<% @challenge.levels.each do |level|%>
+<p>At <%= level.time %> minutes do
+<%= level.description %> </p>
+<% end %>
 
 <%= render 'events/form' %>
 
