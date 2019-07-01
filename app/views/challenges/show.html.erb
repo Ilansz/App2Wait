@@ -1,11 +1,14 @@
 <h1> <%= @challenge.name %> </h1>
 
 <p> <%= cl_image_tag @challenge.photo, height: 300, width: 400, crop: :fill %> </p>
-
-<h4> <%= link_to "groups", groups_path %> </h4>
-
-<%= simple_form_for @event do |f| %>
-  <%= f.submit "pick", class: "btn btn-primary" %>
+<% @challenge.levels.each do |level|%>
+<p>At <%= level.time %> minutes do
+<%= level.description %> </p>
 <% end %>
+
+<%= render 'events/form' %>
+
+
+
 
 <p> <%= link_to "back", challenges_path %> </p>
