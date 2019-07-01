@@ -2,9 +2,9 @@
 
 <p> <%= cl_image_tag @challenge.photo, height: 300, width: 400, crop: :fill %> </p>
 
-<h4> <%= link_to "groups", groups_path %> </h4>
+<%= render 'events/form' %>
 
-<%= link_to "Pick a challenge", new_event_path(challenge_id: @challenge.id), class:"btn-primary btn" %>
+
 
 
 <p> <%= link_to "back", challenges_path %> </p>

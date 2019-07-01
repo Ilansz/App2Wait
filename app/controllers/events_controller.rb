@@ -12,10 +12,17 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    # @event.group =
+    @event.group = Group.find(params[:event][:group_id])
+    if params[:challenge]
+      @challenge = Challenge.find(params[:challenge])
+      @event.name = @challenge.name
+      @event.photo = @challenge.photo.url
+    else
+      redirect_to challenges_path
+    end
     authorize @event
     if @event.save!
-      redirect_to edit_event_path(@event), notice: "#{@event.name} was created."
+      redirect_to event_path(@event), notice: "#{@event.name} was created."
     else
       render :new
     end
@@ -33,11 +40,11 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:name, :photo)
+    params.require(:event).permit(:group)
   end
 
   def set_event
-    authorize @event
     @event = Event.find(params[:id])
+    authorize @event
   end
 end
