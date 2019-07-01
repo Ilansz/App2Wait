@@ -1,6 +1,7 @@
 class ChallengesController < ApplicationController
   def index
-    @challenges = Challenge.all
+    @challenges = skip_policy_scope
+
   end
 
   def show
