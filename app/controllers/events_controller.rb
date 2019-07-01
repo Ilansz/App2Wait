@@ -11,6 +11,7 @@ class EventsController < ApplicationController
   end
 
   def create
+    # @eventLevel = EventLevel.new
     @event = Event.new(event_params)
     @event.group = Group.find(params[:event][:group_id])
     if params[:challenge]
@@ -22,7 +23,7 @@ class EventsController < ApplicationController
     end
     authorize @event
     if @event.save!
-      redirect_to event_path(@event), notice: "#{@event.name} was created."
+      # redirect_to new_events_level_path(EventLevel), notice: "#{@event.name} was created."
     else
       render :new
     end
