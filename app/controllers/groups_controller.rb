@@ -18,11 +18,14 @@ class GroupsController < ApplicationController
     @group = Group.new(group_params)
     @group.user = current_user
     @group.save
+    if !params[:users].nil?
+
     # iterate through the users to create a group user for every single username
     params[:users].each do |userid|
       user = User.find(userid)
       # raise
       GroupsUser.create!(user: user, group: @group)
+    end
     end
     GroupsUser.create!(user: current_user, group: @group)
     authorize @group
