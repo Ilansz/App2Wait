@@ -1,11 +1,11 @@
 class EventsController < ApplicationController
-  def index
-  end
+  before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def show
   end
 
   def new
+    @event = Event.new
   end
 
   def create
@@ -18,5 +18,11 @@ class EventsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def set_event
+    @event = Event.find(params[:id])
   end
 end
