@@ -1,9 +1,7 @@
-<h1>Challenges#index</h1>
-<p>Find me in app/views/challenges/index.html.erb</p>
-
-<%= current_user %>
-<%= current_user.username %>
-
-
-
-Cloudinary::Uploader.upload("app/assets/images/AxelResnik.png")
+<% @challenges.each do |challenge| %>
+  <p>
+    <%= link_to challenge_path(challenge), class: "btn btn-primary" do %>
+      <%= challenge.name %>
+    <% end %>
+  </p>
+<% end %>

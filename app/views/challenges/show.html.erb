@@ -1,2 +1,7 @@
-<h1>Challenges#show</h1>
-<p>Find me in app/views/challenges/show.html.erb</p>
+<h1> <%= @challenge.name %> </h1>
+
+<p> <%= cl_image_tag @challenge.photo, height: 300, width: 400, crop: :fill %> </p>
+
+<h4> <%= link_to "groups", groups_path %> </h4>
+
+<p> <%= link_to "back", challenges_path %> </p>
