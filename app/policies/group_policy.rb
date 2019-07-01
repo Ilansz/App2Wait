@@ -1,7 +1,7 @@
 class GroupPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all.order(average_lateness: :desc)
+      scope.all
     end
   end
 

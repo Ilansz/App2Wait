@@ -2,7 +2,8 @@
 
 
 <% @groups.each do |group| %>
-  <p>
-    <%= group.name %>
-  </p>
+    <p><%= group.name %> <%= link_to "See more", group_path(group) %> </p>
 <% end %>
+
+
+<%= link_to "Create a new group", new_group_path  %>
