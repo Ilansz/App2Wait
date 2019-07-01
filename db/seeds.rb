@@ -1,8 +1,9 @@
+
 puts 'Destroying old database...'
+GroupsUser.destroy_all
 User.destroy_all
 Group.destroy_all
 Challenge.destroy_all
-GroupUser.destroy_all
 
 puts "Generating Users"
 
@@ -238,18 +239,18 @@ puts "Finished generating Groups"
 
 puts "Generating Groups/Users"
 
-GroupUser.create!(group_id: app2wait.id, user_id: cuervo.id)
-GroupUser.create!(group_id: app2wait.id, user_id: ilan.id)
-GroupUser.create!(group_id: app2wait.id, user_id: ben.id)
+GroupsUser.create!(group_id: app2wait.id, user_id: cuervo.id)
+GroupsUser.create!(group_id: app2wait.id, user_id: ilan.id)
+GroupsUser.create!(group_id: app2wait.id, user_id: ben.id)
 
-GroupUser.create!(group_id: soccer.id, user_id: cuervo.id)
-GroupUser.create!(group_id: soccer.id, user_id: ilan.id)
-GroupUser.create!(group_id: soccer.id, user_id: ben.id)
-GroupUser.create!(group_id: soccer.id, user_id: max.id)
-GroupUser.create!(group_id: soccer.id, user_id: joe.id)
+GroupsUser.create!(group_id: soccer.id, user_id: cuervo.id)
+GroupsUser.create!(group_id: soccer.id, user_id: ilan.id)
+GroupsUser.create!(group_id: soccer.id, user_id: ben.id)
+GroupsUser.create!(group_id: soccer.id, user_id: max.id)
+GroupsUser.create!(group_id: soccer.id, user_id: joe.id)
 
-GroupUser.create!(group_id: france.id, user_id: ilan.id)
-GroupUser.create!(group_id: france.id, user_id: david.id)
+GroupsUser.create!(group_id: france.id, user_id: ilan.id)
+GroupsUser.create!(group_id: france.id, user_id: david.id)
 
 puts "Finished generating Groups/Users"
 
