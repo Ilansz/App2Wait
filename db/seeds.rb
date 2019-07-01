@@ -122,6 +122,17 @@ Challenge.create!(name: "The worm",
 Challenge.create!(name: "No phone",
                  remote_photo_url: "https://media.giphy.com/media/2yrq3JzXZWCa7x8Yrg/giphy.gif")
 
-
 puts "Done seeding!"
+
+Group.create(name: "ilan")
+
+Group.create(name: "axel")
+
+Group.create(name: "snoopy")
+
+Group.create(name: "scooby-doo")
+
+Group.create(name: "asterix")
+
+Group.create(name: "obelix")
 
