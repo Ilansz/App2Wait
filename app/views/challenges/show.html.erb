@@ -4,8 +4,7 @@
 
 <h4> <%= link_to "groups", groups_path %> </h4>
 
-<%= simple_form_for @event do |f| %>
-  <%= f.submit "pick", class: "btn btn-primary" %>
-<% end %>
+<%= link_to "Pick a challenge", new_event_path(challenge_id: @challenge.id), class:"btn-primary btn" %>
+
 
 <p> <%= link_to "back", challenges_path %> </p>

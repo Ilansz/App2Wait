@@ -5,15 +5,15 @@ class EventsController < ApplicationController
   end
 
   def new
+    @challenge = Challenge.find(params[:challenge_id])
     @event = Event.new
     authorize @event
   end
 
   def create
     @event = Event.new(event_params)
-    @event.user = current_user
+    # @event.group =
     authorize @event
-    @event.save
     if @event.save!
       redirect_to edit_event_path(@event), notice: "#{@event.name} was created."
     else
