@@ -5,6 +5,6 @@
 <%= f.input :name %>
 <%= f.input :photo %>
 <%= f.input :photo_cache, as: :hidden %>
-<%= select_tag("Users", options_from_collection_for_select(User.all, 'id', 'username' ),  multiple: true, include_hidden: false) %>
+<%= select_tag("users", options_from_collection_for_select(User.all, 'id', 'username' ),  multiple: true, include_hidden: false) %>
 <%= f.submit "Create a group", class: "btn btn-primary" %>
 <% end %>
