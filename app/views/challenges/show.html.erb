@@ -6,11 +6,9 @@
 <%= level.description %> </p>
 <% end %>
 
+<%= render 'groups/form' %>
 
 <%= render 'events/form' %>
-
-<%= link_to "create group", new_group_path, class: "btn btn-primary w-50" %>
-
 
 
 <p> <%= link_to "back", challenges_path %> </p>
