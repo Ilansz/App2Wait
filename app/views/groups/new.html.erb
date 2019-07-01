@@ -1,2 +1,10 @@
-<h1>Groups#new</h1>
-<p>Find me in app/views/groups/new.html.erb</p>
+<h1>Create a new group</h1>
+
+
+<% simple_form_for @group do |f| %>
+  <%= f.input :name %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.input :users, collection: User.all %>
+  <%= f.submit "Create a group", class: "btn btn-primary" %>
+<% end %>
