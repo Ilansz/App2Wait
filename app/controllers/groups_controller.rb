@@ -7,7 +7,6 @@ class GroupsController < ApplicationController
   end
 
   def show
-    authorize @group
   end
 
   def new
@@ -19,15 +18,12 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    authorize @group
   end
 
   def update
-    authorize @group
   end
 
   def destroy
-    authorize @group
   end
 
   private
