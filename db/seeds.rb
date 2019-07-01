@@ -1,4 +1,3 @@
-
 puts 'Destroying old database...'
 GroupsUser.destroy_all
 User.destroy_all
