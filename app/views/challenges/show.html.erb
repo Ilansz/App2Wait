@@ -6,10 +6,9 @@
 <%= level.description %> </p>
 <% end %>
 
-<h4> <%= link_to "groups", groups_path %> </h4>
+<%= render 'events/form' %>
 
-<%= simple_form_for @event do |f| %>
-  <%= f.submit "pick", class: "btn btn-primary" %>
-<% end %>
+
+
 
 <p> <%= link_to "back", challenges_path %> </p>
