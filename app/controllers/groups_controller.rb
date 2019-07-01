@@ -18,9 +18,9 @@ class GroupsController < ApplicationController
     @group = Group.create(group_params)
     # iterate through the users to create a group user for every single username
     params[:users].each do |userid|
-
       GroupsUser.create!(user_id: userid, group_id: @group.id)
     end
+    GroupsUser.create!(user_id: current_user.id, group_id: @group.id)
     authorize @group
     redirect_to challenges_path
   end
