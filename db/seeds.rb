@@ -1,8 +1,8 @@
 puts 'Destroying old database...'
 User.destroy_all
+Group.destroy_all
 Challenge.destroy_all
 # GroupUser.destroy_all
-# Group.destroy_all
 
 puts "Generating Users"
 
