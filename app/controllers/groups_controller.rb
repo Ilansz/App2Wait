@@ -15,6 +15,10 @@ class GroupsController < ApplicationController
   end
 
   def create
+    @group = Group.save(group_params)
+
+    # iterate through the users to create a group user for every single username
+
     authorize @group
   end
 
@@ -32,5 +36,9 @@ class GroupsController < ApplicationController
   def set_group
     @group = Group.find(params[:id])
     authorize @group
+  end
+
+  def group_params
+    params.require(:group).permit(:name, :photo)
   end
 end
