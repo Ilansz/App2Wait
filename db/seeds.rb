@@ -1,7 +1,7 @@
 puts 'Destroying old database...'
 GroupsUser.destroy_all
-User.destroy_all
 Group.destroy_all
+User.destroy_all
 Challenge.destroy_all
 
 puts "Generating Users"
@@ -222,13 +222,16 @@ puts "Finished generating Levels"
 puts "Generating Groups"
 
 app2wait = Group.new(name: 'app2wait',
-                    remote_photo_url: 'https://images-eu.ssl-images-amazon.com/images/I/61n252YpctL.png')
+                    remote_photo_url: 'https://images-eu.ssl-images-amazon.com/images/I/61n252YpctL.png',
+                    user: rabea)
 
 soccer = Group.new(name: 'soccer',
-                  remote_photo_url: 'https://i.linio.com/p/9e447eff5bfbea39ea57d204879d0b3d-product.jpg')
+                  remote_photo_url: 'https://i.linio.com/p/9e447eff5bfbea39ea57d204879d0b3d-product.jpg',
+                  user: cuervo)
 
 france = Group.new(name: 'france',
-                   remote_photo_url: 'https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg')
+                   remote_photo_url: 'https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg',
+                   user: max)
 
 app2wait.save!
 soccer.save!

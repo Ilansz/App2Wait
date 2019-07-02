@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 2019_07_01_161446) do
     t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
   create_table "groups_users", force: :cascade do |t|
@@ -93,7 +95,11 @@ ActiveRecord::Schema.define(version: 2019_07_01_161446) do
   end
 
   add_foreign_key "events", "groups"
+<<<<<<< HEAD
   add_foreign_key "events_levels", "events"
+=======
+  add_foreign_key "groups", "users"
+>>>>>>> db3056ce01e71b0d6714c4836fb4df6fceee2072
   add_foreign_key "groups_users", "groups"
   add_foreign_key "groups_users", "users"
   add_foreign_key "levels", "challenges"

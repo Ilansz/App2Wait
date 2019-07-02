@@ -2,3 +2,9 @@
 <% @group.users.each do |user| %>
 <%= user.username %>
 <% end %>
+
+<% if policy(@group).destroy? %>
+   <%= link_to group_path(@group), method: :delete, class: "btn btn-secondary" do %>
+     Remove group
+   <% end %>
+ <% end %>

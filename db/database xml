@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
-<!-- Active URL: https://kitt.lewagon.com/db/2268 -->
+<!-- Active URL: https://kitt.lewagon.com/db/2272 -->
 <sql>
 <datatypes db="postgresql">
   <group label="Numeric" color="rgb(238,238,170)">
@@ -41,7 +41,7 @@
     <type label="Inet CIDR Addr" length="0" sql="CIDR" quote="'"/>
     <type label="Geometry" length="0" sql="GEOMETRY" quote="'"/>
   </group>
-</datatypes><table x="417" y="98" name="users">
+</datatypes><table x="334" y="232" name="users">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -61,7 +61,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="950" y="107" name="groups users">
+<table x="485" y="95" name="groups users">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -77,7 +77,25 @@
 <part>id</part>
 </key>
 </table>
-<table x="1539" y="179" name="groups">
+<table x="681" y="189" name="groups">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="name" null="1" autoincrement="0">
+<datatype>CHAR</datatype>
+<default>NULL</default></row>
+<row name="photo" null="1" autoincrement="0">
+<datatype>CHAR</datatype>
+<default>NULL</default></row>
+<row name="id_users" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="users" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="176" y="373" name="challenges">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -91,21 +109,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="247" y="570" name="challenges">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="name" null="1" autoincrement="0">
-<datatype>CHAR</datatype>
-<default>NULL</default></row>
-<row name="photo" null="1" autoincrement="0">
-<datatype>CHAR</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="1368" y="563" name="events">
+<table x="831" y="234" name="events">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -126,7 +130,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="514" y="416" name="levels">
+<table x="435" y="416" name="levels">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -144,7 +148,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="945" y="531" name="events levels">
+<table x="787" y="463" name="events levels">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -162,7 +166,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="232" y="306" name="videos">
+<table x="161" y="213" name="videos">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
