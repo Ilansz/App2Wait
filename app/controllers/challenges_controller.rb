@@ -3,6 +3,7 @@ class ChallengesController < ApplicationController
 
   def index
     @challenges = policy_scope(Challenge)
+    @challenge = Challenge.order("RANDOM()").first
   end
 
   def show

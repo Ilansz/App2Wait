@@ -128,7 +128,7 @@ puts "Finished generating users"
 
 puts "Generating challenges"
 
-chicken = Challenge.new(name: "chicken dance",
+chicken = Challenge.new(name: "Chicken dance",
                         remote_photo_url: "https://media.giphy.com/media/3o752olKiKtMfQunzW/giphy.gif")
 
 pushups = Challenge.new(name: "Pushups",
@@ -137,7 +137,7 @@ pushups = Challenge.new(name: "Pushups",
 get_number = Challenge.new(name: "Get phone numbers",
                            remote_photo_url: "https://media.giphy.com/media/11SIBu3s72Co8w/giphy.gif")
 
-macarena = Challenge.new(name: "The macarena",
+macarena = Challenge.new(name: "The Macarena",
                      remote_photo_url: "https://media.giphy.com/media/u6jNILpQWrF9C/giphy.gif")
 
 no_phone = Challenge.new(name: "No phone",
