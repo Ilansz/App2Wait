@@ -15,12 +15,19 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.create(group_params)
+    @group = Group.new(group_params)
+    @group.user = current_user
+    @group.save
+    if !params[:users].nil?
+
     # iterate through the users to create a group user for every single username
     params[:users].each do |userid|
-      GroupsUser.create!(user_id: userid, group_id: @group.id)
+      user = User.find(userid)
+      # raise
+      GroupsUser.create!(user: user, group: @group)
     end
-    GroupsUser.create!(user_id: current_user.id, group_id: @group.id)
+    end
+    GroupsUser.create!(user: current_user, group: @group)
     authorize @group
     redirect_to challenges_path
   end
@@ -29,9 +36,22 @@ class GroupsController < ApplicationController
   end
 
   def update
+    @group.update(group_params)
+      if !params[:users].nil?
+      params[:users].each do |userid|
+        user = User.find(userid)
+
+        # raise
+        GroupsUser.create!(user: user, group: @group)
+      end
+    end
+
+    redirect_to group_path(@group)
   end
 
   def destroy
+    @group.destroy
+    redirect_to challenges_path
   end
 
   private
@@ -42,6 +62,6 @@ class GroupsController < ApplicationController
   end
 
   def group_params
-    params.require(:group).permit(:name, :photo, :username)
+    params.require(:group).permit(:name, :photo)
   end
 end
