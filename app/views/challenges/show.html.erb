@@ -2,17 +2,17 @@
 
 <div class="container">
   <div class='mb-3'>
-<%= cl_image_tag @challenge.photo, crop: :fill, class: 'card-category challenge-card' %>
-</div>
-<% @challenge.levels.each do |level|%>
-<p>At <%= level.time %> minutes do
-<%= level.description %> </p>
-<% end %>
+    <%= cl_image_tag @challenge.photo, crop: :fill, class: 'card-category challenge-card' %>
+  </div>
+  <% @challenge.levels.each do |level|%>
+  <p>At <%= level.time %> minutes do
+    <%= level.description %> </p>
+    <% end %>
 
-<%= render 'groups/form' %>
+    <%= render 'groups/form' %>
 
-<%= render 'events/form' %>
+    <%= render 'events/form' %>
 
 
-<p> <%= link_to "back", challenges_path %> </p>
+   <p> <%= link_to "back", challenges_path %> </p>
 </div>
