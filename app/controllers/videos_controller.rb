@@ -39,7 +39,3 @@ class VideosController < ApplicationController
     params.require(:video).permit(:tag, :challenge_id, :video)
   end
 end
-
-# t.string "tag"
-# t.bigint "challenge_id"
-# t.bigint "user_id"

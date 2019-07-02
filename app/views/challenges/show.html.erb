@@ -1,6 +1,9 @@
-<h1> <%= @challenge.name %> </h1>
+<h1 class="text-center"> <%= @challenge.name %> </h1>
 
-<p> <%= cl_image_tag @challenge.photo, height: 300, width: 400, crop: :fill %> </p>
+<div class="container">
+  <div class='mb-3'>
+<%= cl_image_tag @challenge.photo, crop: :fill, class: 'card-category challenge-card' %>
+</div>
 <% @challenge.levels.each do |level|%>
 <p>At <%= level.time %> minutes do
 <%= level.description %> </p>
@@ -12,3 +15,4 @@
 
 
 <p> <%= link_to "back", challenges_path %> </p>
+</div>
