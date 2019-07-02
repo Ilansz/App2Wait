@@ -90,16 +90,14 @@ ActiveRecord::Schema.define(version: 2019_07_01_161446) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "video"
     t.index ["challenge_id"], name: "index_videos_on_challenge_id"
     t.index ["user_id"], name: "index_videos_on_user_id"
   end
 
   add_foreign_key "events", "groups"
-<<<<<<< HEAD
   add_foreign_key "events_levels", "events"
-=======
   add_foreign_key "groups", "users"
->>>>>>> db3056ce01e71b0d6714c4836fb4df6fceee2072
   add_foreign_key "groups_users", "groups"
   add_foreign_key "groups_users", "users"
   add_foreign_key "levels", "challenges"
