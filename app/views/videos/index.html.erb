@@ -1,7 +1,16 @@
-<h1>Videos#index</h1>
-<p>Find me in app/views/videos/index.html.erb</p>
+
+
+
 
 <% @videos.each do |v| %>
-    <%= v.tag %>
-    <%= cl_video_tag(v.video_url.to_s, :controls => true) %>
+  <div class="card-trip">
+      <%= cl_video_tag(v.video_url.to_s, :controls => true) %>
+    <div class="card-trip-infos">
+      <div>
+      <h2> <%= v.tag %> </h2>
+      <p><%= v.user.username %></p>
+      </div>
+      <%= cl_image_tag (v.user.photo), class:"card-trip-user avatar-bordered" %>
+    </div>
+  </div>
 <% end %>
