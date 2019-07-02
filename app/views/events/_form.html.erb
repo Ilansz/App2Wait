@@ -1,13 +1,14 @@
+<% @groups = Group.all %>
 <div class="container">
 
   <%= simple_form_for(@event) do |f| %>
 
     <div class="form-inputs">
-      <%= f.association :group %>
+      <%= f.association :group, collection: @groups %>
     </div>
 
     <div class="form-actions d-flex justify-content-center">
-      <%= f.button :submit, value: "Launch", class: "btn btn-primary w-50 my-2 btn-text" %>
+      <%= f.button :submit, value: "Launch", class: "btn btn-primary btn-block" %>
       <%= hidden_field_tag :challenge, @challenge.id %>
     </div>
   <% end %>

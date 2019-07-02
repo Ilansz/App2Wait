@@ -4,15 +4,25 @@
   <div class='mb-3'>
     <%= cl_image_tag @challenge.photo, crop: :fill, class: 'card-category challenge-card' %>
   </div>
-  <% @challenge.levels.each do |level|%>
-  <p>At <%= level.time %> minutes do
-    <%= level.description %> </p>
-    <% end %>
+  <div>
+    <% @challenge.levels.each do |level|%>
+    <div class="card-product my-2">
+      <div class="card-time">
+        <h6>  <%= level.time %> <br> min </h6>
+      </div>
+      <div class="card-product-infos">
+       <h2> <%= level.description %> </h2>
+     </div>
+   </div>
+   <% end %>
 
-    <%= render 'groups/form' %>
+  <div class="groups d-flex">
+   <%= render 'events/form' %>
+   <button>+</button>
+  </div>
 
-    <%= render 'events/form' %>
-
+   <%= render 'groups/form' %>
 
    <p> <%= link_to "back", challenges_path %> </p>
-</div>
+ </div>
+
