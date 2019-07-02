@@ -22,7 +22,7 @@ class EventsController < ApplicationController
     end
     authorize @event
     if @event.save!
-      redirect_to event_path(@event), notice: "#{@event.name} was created."
+      redirect_to new_events_level_path
     else
       render :new
     end

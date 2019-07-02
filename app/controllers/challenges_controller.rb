@@ -7,7 +7,7 @@ class ChallengesController < ApplicationController
 
   def show
     @challenge = Challenge.find(params[:id])
-    # @group = Group.find
+    @group = Group.new
     @event = Event.new
     authorize @challenge
   end
