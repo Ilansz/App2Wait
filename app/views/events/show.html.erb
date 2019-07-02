@@ -4,7 +4,16 @@
 
 <%= image_tag ( "https://media.giphy.com/media/l0HlHHTwgXMl4hTeE/giphy.gif") %>
 
-<%#= image_tag @event.photo %>
-<!-- ^ this line displays the image of the event -->
+<br>
+<br>
+
+<% @event.events_levels.each do |event_level| %>
+  <p> After <%= event_level.time %> minutes <%= event_level.description %> </p>
+<% end %>
+
+<br>
+<br>
+
+<%= link_to "remove", event_path(@event), method: :delete %>
 
 </div>
