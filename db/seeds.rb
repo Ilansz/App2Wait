@@ -128,7 +128,7 @@ puts "Finished generating users"
 
 puts "Generating challenges"
 
-chicken = Challenge.new(name: "Chicken dance",
+chicken = Challenge.new(name: "Chicken Dance",
                         remote_photo_url: "https://media.giphy.com/media/3o752olKiKtMfQunzW/giphy.gif")
 
 pushups = Challenge.new(name: "Pushups",
