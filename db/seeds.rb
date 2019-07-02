@@ -1,12 +1,12 @@
 puts 'Destroying old database...'
-GroupsUser.destroy_all
-puts 'GroupsUser destroy'
-Video.destroy_all
-puts "Video destroy"
-User.destroy_all
-puts "User destroy"
 Group.destroy_all
 puts "Groups destroy"
+Video.destroy_all
+puts "Video destroy"
+GroupsUser.destroy_all
+puts 'GroupsUser destroy'
+User.destroy_all
+puts "User destroy"
 Challenge.destroy_all
 puts "Challenge destroy"
 
