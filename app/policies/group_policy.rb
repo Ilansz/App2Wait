@@ -13,6 +13,10 @@ class GroupPolicy < ApplicationPolicy
     true
   end
 
+  def edit?
+    true
+  end
+
   def update?
     record.user == user
   end
