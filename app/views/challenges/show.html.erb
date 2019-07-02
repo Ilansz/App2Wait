@@ -1,6 +1,5 @@
-<h1 class="text-center"> <%= @challenge.name %> </h1>
-
 <div class="container">
+  <h1 class="text-center"> <%= @challenge.name %> </h1>
   <div class='mb-3'>
     <%= cl_image_tag @challenge.photo, crop: :fill, class: 'card-category challenge-card' %>
   </div>
@@ -15,7 +14,7 @@
      </div>
    </div>
    <% end %>
-
+  </div>
    <div class="groups">
      <%= render 'events/form' %>
    </div>

@@ -1,5 +1,18 @@
-<h2> SET THE PARAMETERS </h2>
-
-<p> <%= image_tag @event.photo %> </p>
-
-<%= render 'form_edit' %>
+<div class="container mt-2">
+  <h1 class="text-center"> Edit <%= @event.name %> </h1>
+  <div class='mb-3'>
+    <%= image_tag @event.photo, crop: :fill, class: 'card-category challenge-card' %>
+  </div>
+  <div>
+    <% @event.events_levels.each do |events_level|%>
+    <div class="card-product my-2">
+      <div class="card-time">
+        <h6> <%= render 'form_edit', event_level: events_level.time %> <br> min </h6>
+      </div>
+      <div class="card-product-infos">
+       <h2> <%= events_level.description %> </h2>
+     </div>
+   </div>
+   <% end %>
+  </div>
+</div>
