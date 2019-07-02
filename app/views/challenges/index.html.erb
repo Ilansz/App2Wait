@@ -1,7 +1,12 @@
+<h2 class="text-center">Challenge time!</h2>
+
+<div class="container">
+<div class="cards">
 <% @challenges.each do |challenge| %>
-  <p>
-    <%= link_to challenge_path(challenge), class: "btn btn-primary" do %>
-      <%= challenge.name %>
-    <% end %>
-  </p>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= challenge.photo %>)">
+    <%= link_to challenge.name, challenge_path(challenge)  %>
+  </div>
 <% end %>
+</div>
+</div>
+
