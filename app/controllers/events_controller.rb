@@ -22,7 +22,12 @@ class EventsController < ApplicationController
     end
     authorize @event
     if @event.save!
-      redirect_to new_events_level_path
+      @challenge.levels.each do |level|
+        oneLevel = Level.find(level.id)
+        @eventsLevels = EventsLevel.new(time: oneLevel.time, description: oneLevel.description, event_id: @event.id)
+        @eventsLevels.save
+      end
+      redirect_to edit_event_path(@event)
     else
       render :new
     end
@@ -32,9 +37,16 @@ class EventsController < ApplicationController
   end
 
   def update
+    params[:event][:events_levels_attributes].each do |_, event_level|
+      @event_level = EventsLevel.find(event_level[:id])
+      @event_level.update(time: event_level[:time])
+    end
+    redirect_to event_path(@event)
   end
 
   def destroy
+    @event.destroy
+    redirect_to challenges_path
   end
 
   private
