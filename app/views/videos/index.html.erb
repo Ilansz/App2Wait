@@ -4,7 +4,7 @@
 
 <% @videos.each do |v| %>
   <div class="card-trip">
-      <%= cl_video_tag(v.video_url.to_s, :controls => true, :quality=>50) %>
+      <%= cl_video_tag(v.video_url.to_s, :controls => true, :quality=>50, :format=>"webm") %>
     <div class="card-trip-infos">
       <div>
       <h2> <strong>Title:</strong> <%= v.tag %>  </h2>
