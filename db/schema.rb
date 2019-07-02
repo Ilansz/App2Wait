@@ -95,11 +95,8 @@ ActiveRecord::Schema.define(version: 2019_07_01_161446) do
   end
 
   add_foreign_key "events", "groups"
-<<<<<<< HEAD
   add_foreign_key "events_levels", "events"
-=======
   add_foreign_key "groups", "users"
->>>>>>> db3056ce01e71b0d6714c4836fb4df6fceee2072
   add_foreign_key "groups_users", "groups"
   add_foreign_key "groups_users", "users"
   add_foreign_key "levels", "challenges"
