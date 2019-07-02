@@ -7,7 +7,7 @@
     <% @event.events_levels.each do |events_level|%>
     <div class="card-product my-2">
       <div class="card-time">
-        <h6> <%= render 'form_edit', event_level: events_level.time %> <br> min </h6>
+        <h6> <%= events_level.time %> <br> min </h6>
       </div>
       <div class="card-product-infos">
        <h2> <%= events_level.description %> </h2>
@@ -16,3 +16,5 @@
    <% end %>
   </div>
 </div>
+
+<%= render 'form_edit' %>
