@@ -4,11 +4,11 @@
 
 <% @videos.each do |v| %>
   <div class="card-trip">
-      <%= cl_video_tag(v.video_url.to_s, :controls => true) %>
+      <%= cl_video_tag(v.video_url.to_s, :controls => true, :quality=>50) %>
     <div class="card-trip-infos">
       <div>
-      <h2> <%= v.tag %> </h2>
-      <p><%= v.user.username %></p>
+      <h2> <strong>Title:</strong> <%= v.tag %>  </h2>
+      <p> <strong>Challenge:</strong>  <%= v.challenge.name %></p>
       </div>
       <%= cl_image_tag (v.user.photo), class:"card-trip-user avatar-bordered" %>
     </div>
