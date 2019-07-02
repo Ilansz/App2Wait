@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(version: 2019_07_01_161446) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "video"
     t.index ["challenge_id"], name: "index_videos_on_challenge_id"
     t.index ["user_id"], name: "index_videos_on_user_id"
   end

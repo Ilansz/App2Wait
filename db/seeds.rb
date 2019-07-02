@@ -1,8 +1,14 @@
 puts 'Destroying old database...'
 GroupsUser.destroy_all
-Group.destroy_all
+puts 'GroupsUser destroy'
+Video.destroy_all
+puts "Video destroy"
 User.destroy_all
+puts "User destroy"
+Group.destroy_all
+puts "Groups destroy"
 Challenge.destroy_all
+puts "Challenge destroy"
 
 puts "Generating Users"
 
@@ -255,5 +261,16 @@ GroupsUser.create!(group_id: france.id, user_id: ilan.id)
 GroupsUser.create!(group_id: france.id, user_id: david.id)
 
 puts "Finished generating Groups/Users"
+
+puts "Generating Videos"
+
+Video.create!(remote_video_url: 'http://res.cloudinary.com/dn4gmiobc/video/upload/v1561995733/reiuxlntg6uhynogclz8.mp4',
+              challenge_id: chicken.id,
+              user_id: cuervo.id,
+              tag: "test video")
+
+# Cloudinary::Uploader.upload("Test_video.mp4", :resource_type => :video)
+
+puts "Finished generating videos"
 
 puts "Done seeding!"
