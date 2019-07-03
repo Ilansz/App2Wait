@@ -40,8 +40,9 @@ class EventsController < ApplicationController
     params[:event][:events_levels_attributes].each do |_, event_level|
       @event_level = EventsLevel.find(event_level[:id])
       time = event_level[:time].to_i
-      finish_time = Time.now + time.minutes
+      finish_time = Time.now.utc + time.minutes
       @event_level.update(time: time, challenge_end_time: finish_time)
+
       if @event_level.update(time: event_level[:time])
         next
       else

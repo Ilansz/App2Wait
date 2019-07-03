@@ -31,6 +31,7 @@ const enableTime = () => {
     }
     }, 1000)
   }
+
   firstChTime(firstTime, firsttimer)
   firstChTime(secondTime, secondtimer)
   firstChTime(lastTime, lasttimer)
