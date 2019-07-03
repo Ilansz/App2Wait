@@ -23,13 +23,13 @@ const enableTime = () => {
      let difference = finishSecs - beginSecs;
      let diffMin = Math.floor(difference / 60);
      let diffSec = difference % 60;
-      showDiv.innerHTML = `${diffMin}:${diffSec}`
-    if (difference <= 0) {
+     showDiv.innerHTML = `${diffMin}:${diffSec}`
+     if (difference <= 0) {
       firstTime.classList.remove('disabled');
       showDiv.classList.add('d-none');
       firstTime.classList.add('bg-success');
     };
-    }, 1000);
+  }, 1000);
   };
 
   firstChTime(firstTime, firsttimer);
