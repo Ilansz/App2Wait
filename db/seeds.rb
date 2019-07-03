@@ -264,7 +264,7 @@ puts "Finished generating Groups/Users"
 
 puts "Generating Videos"
 
-Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562139890/Ben_zoom_d6f3od.mp4',
+Video.create!(remote_video_url: 'http://res.cloudinary.com/dyseqqsmw/video/upload/v1562139890/Ben_zoom_d6f3od.mp4',
               challenge_id: chicken.id,
               user_id: cuervo.id,
               tag: "Ben ZooOOooOOm")
