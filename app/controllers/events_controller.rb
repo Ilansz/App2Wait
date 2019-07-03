@@ -42,6 +42,11 @@ class EventsController < ApplicationController
       time = event_level[:time].to_i
       finish_time = Time.now + time.minutes
       @event_level.update(time: time, challenge_end_time: finish_time)
+      if @event_level.update(time: event_level[:time])
+        next
+      else
+        render :edit and return
+      end
     end
     redirect_to event_path(@event)
   end

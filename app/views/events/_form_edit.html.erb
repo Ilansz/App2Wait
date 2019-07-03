@@ -1,18 +1,8 @@
-<div class="container">
-
-  <%= form_for(@event) do |f| %>
-
-    <div class="form-inputs">
-      <%= f.fields_for :events_levels do |f|  %>
-      <%= render 'event_levels_fields', f: f %>
-    </div>
-
-    <% end %>
-
-    <div class="form-actions d-flex justify-content-center">
-      <%= f.button :submit, class: "btn btn-primary w-50 my-2 btn-text submit-event" %>
-    </div>
+<%= form_for(@event) do |f| %>
+  <%= f.fields_for :events_levels, @event.events_levels.sort_by(&:time) do |t|  %>
+  <%= render 'event_levels_fields', t: t %>
   <% end %>
-
-</div>
-
+  <div class="d-flex justify-content-center">
+    <%= f.button :submit, class: "btn btn-outline-warning w-100 font-weight-bolder" %>
+  </div>
+<% end %>
