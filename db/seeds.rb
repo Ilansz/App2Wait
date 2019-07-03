@@ -272,7 +272,7 @@ Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/uplo
               challenge_id: pushups.id,
               user_id: clara.id,
               tag: "Ben doesn't want to be late anymore!")
-Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562145716/xs3vzzllej3ppx3j7syq.mp4',
+Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562148319/Axel_chocken_dance_ynzlfo.mp4',
               challenge_id: chicken.id,
               user_id: benya.id,
               tag: "Chicken Dance")
