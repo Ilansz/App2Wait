@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :challenges, only: [:index, :show]
   resources :events, only: [:show, :new, :create, :edit, :update, :destroy]
-  resources :events_levels, only: [:new, :create, :edit, :update, :destroy]
+  resources :events_levels, only: [:new]
   resources :groups
   resources :videos, only: [:index, :show, :new, :create, :destroy]
 end

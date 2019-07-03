@@ -1,21 +1,21 @@
 const plusMinus = () => {
 
-  var divs = document.querySelectorAll(".card-time");
+  var divs = document.querySelectorAll(".card-count");
 
   divs.forEach((item) => {
 
-    var plus = item.children[0];
+    var minus = item.children[0];
     var count = item.children[1];
-    var minus = item.children[2];
-
-    plus.addEventListener('click', (event) => {
-      count.value++;
-    });
+    var plus = item.children[2];
 
     minus.addEventListener('click', (event) => {
       if (count.value > 1) {
         count.value--;
       }
+    });
+
+    plus.addEventListener('click', (event) => {
+      count.value++;
     });
 
   });

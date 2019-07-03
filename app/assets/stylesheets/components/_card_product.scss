@@ -69,9 +69,49 @@
     background-color: white;
     width: 500px;
     border: none;
-
 }
 
-.icon {
+.card-time-edit {
+  margin: 0;
+  height: 100%;
+  background-color: #ffa63a;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  justify-content: center;
+  padding: 5px;
+  position: relative;
+}
 
+.card-time-edit input {
+  width: 50vw;
+  text-align: center;
+  border: none;
+  background-color: #f4f8fb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+}
+
+#minus {
+  position: absolute;
+  left: 0;
+  width: 15vw;
+  background-color: $white;
+  color: #ffa63a;
+  border-radius: 2px;
+  border-color: $white;
+}
+
+#plus {
+  position: absolute;
+  right: 0;
+  width: 15vw;
+  background-color: $white;
+  color: #ffa63a;
+  border-radius: 2px;
+  border-color: $white;
+}
+
+.mins-late {
+  margin: 0 auto;
 }
