@@ -2,13 +2,13 @@ const startButton = document.querySelector('.submit-event');
 
 
 const enableTime = () => {
-  const firstTime = document.querySelector('#first-level')
-  const secondTime = document.querySelector('#second-level')
-  const lastTime = document.querySelector('#last-level')
-  const enable = document.querySelector('#enable')
-  const firsttimer = document.querySelector('.firsttimer')
-  const secondtimer = document.querySelector('.secondtimer')
-  const lasttimer = document.querySelector('.lasttimer')
+  const firstTime = document.querySelector('#first-level');
+  const secondTime = document.querySelector('#second-level');
+  const lastTime = document.querySelector('#last-level');
+  const enable = document.querySelector('#enable');
+  const firsttimer = document.querySelector('.firsttimer');
+  const secondtimer = document.querySelector('.secondtimer');
+  const lasttimer = document.querySelector('.lasttimer');
 
   const firstChTime = (firstTime, showDiv) => {
     const finishTime = new Date(Date.parse(firstTime.dataset.finishTime));
@@ -26,16 +26,16 @@ const enableTime = () => {
       showDiv.innerHTML = `${diffMin}:${diffSec}`
     if (difference <= 0) {
       firstTime.classList.remove('disabled');
-      showDiv.classList.add('d-none')
-      firstTime.classList.add('bg-success')
-    }
-    }, 1000)
-  }
+      showDiv.classList.add('d-none');
+      firstTime.classList.add('bg-success');
+    };
+    }, 1000);
+  };
 
-  firstChTime(firstTime, firsttimer)
-  firstChTime(secondTime, secondtimer)
-  firstChTime(lastTime, lasttimer)
-}
+  firstChTime(firstTime, firsttimer);
+  firstChTime(secondTime, secondtimer);
+  firstChTime(lastTime, lasttimer);
+};
 export { enableTime }
 
 
