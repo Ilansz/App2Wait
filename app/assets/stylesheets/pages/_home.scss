@@ -12,7 +12,7 @@
 
 .home-page h1 {
   margin: 0;
-  color: white;
+  color: $white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 40px;
   font-weight: bold;
@@ -21,8 +21,8 @@
 
 
 .home-page h3 {
-  color: white;
-  font-weight: bold;
+  font-weight: 800;
+  color: $white;
   //font-size: 25px;
   margin-top: 10%;
 }
@@ -36,4 +36,6 @@
 #call-to-action {
   margin-top: 26%;
   font-size: 30px;
+  font-weight: 800;
+  color: $white;
 }
