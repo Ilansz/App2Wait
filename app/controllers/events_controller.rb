@@ -24,7 +24,7 @@ class EventsController < ApplicationController
     if @event.save!
       @challenge.levels.each do |level|
         one_level = Level.find(level.id)
-        @eventsLevels = EventsLevel.new(time: one_level.time, description: oneLevel.description, event_id: @event.id)
+        @eventsLevels = EventsLevel.new(time: one_level.time, description: one_level.description, event_id: @event.id)
         @eventsLevels.save
       end
       redirect_to edit_event_path(@event)
@@ -39,9 +39,11 @@ class EventsController < ApplicationController
   def update
     params[:event][:events_levels_attributes].each do |_, event_level|
       @event_level = EventsLevel.find(event_level[:id])
+
       time = event_level[:time].to_i
-      finish_time = Time.now.utc + time.minutes
+      finish_time = Time.now + time.minutes
       @event_level.update(time: time, challenge_end_time: finish_time)
+
     end
     redirect_to event_path(@event)
   end
