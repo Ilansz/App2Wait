@@ -10,10 +10,6 @@ const enableTime = () => {
   const secondtimer = document.querySelector('.secondtimer')
   const lasttimer = document.querySelector('.lasttimer')
 
-  enable.addEventListener('click', (event) => {
-    firstTime.classList.remove("disabled")
-  })
-
   const firstChTime = (firstTime, showDiv) => {
     const finishTime = new Date(Date.parse(firstTime.dataset.finishTime));
 
