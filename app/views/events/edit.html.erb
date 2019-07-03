@@ -1,5 +1,5 @@
 <div class="container mt-2">
-  <h1 class="text-center"> Edit <%= @event.name %> </h1>
+  <h1 class="text-center"> Customize your challenge </h1>
   <div class='mb-3'>
     <%= image_tag @event.photo, crop: :fill, class: 'card-category challenge-card' %>
   </div>
@@ -14,7 +14,9 @@
      </div>
    </div>
    <% end %>
+  <%= render 'form_edit' %>
+
+
   </div>
 </div>
 
-<%= render 'form_edit' %>

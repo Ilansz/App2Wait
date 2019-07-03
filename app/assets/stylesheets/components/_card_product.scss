@@ -42,9 +42,28 @@
   color: white;
   font-weight: bold;
   top: 50%;
+  justify-content: center;
 }
 
 .card-time h6 {
   vertical-align: middle;
   padding: 10px;
+}
+
+.card-time input {
+  width: 50%;
+  text-align: center;
+}
+
+.card-time .card-product {
+  justify-content: center;
+}
+
+.disabled-input {
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    width: 500px;
+    border: none;
+
 }
