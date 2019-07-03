@@ -21,7 +21,7 @@ const enableTime = () => {
      // 2. subtract finish from begin
      // 3. convert back to mins and seconds
      let difference = finishSecs - beginSecs;
-     let diffMin = Math.round((difference / 60) -1, 0);
+     let diffMin = Math.floor(difference / 60);
      let diffSec = difference % 60;
       showDiv.innerHTML = `${diffMin}:${diffSec}`
     if (difference <= 0) {
