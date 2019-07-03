@@ -51,8 +51,12 @@
 }
 
 .card-time input {
-  width: 50%;
+  width: 100%;
   text-align: center;
+  border: none;
+  background-color: #f4f8fb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
 }
 
 .card-time .card-product {
@@ -65,5 +69,9 @@
     background-color: white;
     width: 500px;
     border: none;
+
+}
+
+.icon {
 
 }

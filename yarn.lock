@@ -1264,6 +1264,15 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
+bootstrap-input-spinner@^1.11.8:
+  version "1.11.8"
+  resolved "https://registry.yarnpkg.com/bootstrap-input-spinner/-/bootstrap-input-spinner-1.11.8.tgz#5217944c9516629831e1fb840e3c1cfe51ce9efc"
+  integrity sha512-nKJzj1fbfX1hmlNNoeS4Ua/SM3RU+RNkvRGK/IJV9HVuKOC28e1+/SZufL4H0+g56dK7eUYXrFe2PEBsxfzGuQ==
+  dependencies:
+    bootstrap "^4.3.1"
+    jquery "^3.4.1"
+    popper.js "^1.15.0"
+
 bootstrap@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac"

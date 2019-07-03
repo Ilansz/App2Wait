@@ -1,10 +1,12 @@
-
-  <div class="card-product my-2">
-    <div class="card-time">
-      <h6> <%= f.text_field :time %> <br> min </h6>
-    </div>
-    <div class="card-product-infos">
-     <h2> <%= f.text_field :description, disabled: :true, class: "disabled-input" %> </h2>
-   </div>
+<div class="card-product my-2">
+  <div class="card-time">
+    <div type="button" id="minus"> - </div>
+    <%= f.text_field :time, as: :integer, id: "count" %>
+    <div type="button" id="plus"> + </div>
+    <br> min
   </div>
+  <div class="card-product-infos">
+   <h2> <%= f.text_field :description, disabled: :true, class: "disabled-input" %> </h2>
+ </div>
+</div>
 

@@ -4,19 +4,7 @@
     <%= image_tag @event.photo, crop: :fill, class: 'card-category challenge-card' %>
   </div>
   <div>
-    <% @event.events_levels.each do |events_level|%>
-    <div class="card-product my-2">
-      <div class="card-time">
-        <h6> <%= events_level.time %> <br> min </h6>
-      </div>
-      <div class="card-product-infos">
-       <h2> <%= events_level.description %> </h2>
-     </div>
-   </div>
-   <% end %>
-  <%= render 'form_edit' %>
-
-
+    <%= render 'form_edit' %>
   </div>
 </div>
 

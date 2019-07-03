@@ -1,8 +1,6 @@
 <%= form_for(@event) do |f| %>
-
-    <%= f.fields_for :events_levels do |f|  %>
-    <%= render 'event_levels_fields', f: f %>
-    <% end %>
-    <%= f.button :submit, class: "btn btn-primary" %>
-
+  <%= f.fields_for :events_levels do |f|  %>
+  <%= render 'event_levels_fields', f: f %>
+  <% end %>
+  <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>

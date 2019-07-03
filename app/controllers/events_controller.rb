@@ -39,7 +39,11 @@ class EventsController < ApplicationController
   def update
     params[:event][:events_levels_attributes].each do |_, event_level|
       @event_level = EventsLevel.find(event_level[:id])
-      @event_level.update(time: event_level[:time])
+      if @event_level.update(time: event_level[:time])
+        next
+      else
+        render :edit and return
+      end
     end
     redirect_to event_path(@event)
   end
