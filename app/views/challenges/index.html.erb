@@ -1,14 +1,20 @@
-<h2 class="text-center mt-2">Challenge time!</h2>
+<div>
+  <h2 class="text-center mt-2">Challenge time!</h2>
 
-<div class="container">
-  <div class="cards">
-    <% @challenges.each do |challenge| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= challenge.photo %>)">
-      <%= link_to challenge.name, challenge_path(challenge)  %>
+  <div class="container" >
+    <div class="cards">
+      <% @challenges.each do |challenge| %>
+      <div class="card-category" style="background-image: url(<%= challenge.photo %>)">
+
+        <%= link_to challenge.name, challenge_path(challenge)  %>
+      </div>
+      <% end %>
+      <div class="card-category mb-2" style="background-image: url('https://res.cloudinary.com/dyseqqsmw/image/upload/v1562170932/fortune-wheel_ehebze.png')">
+        <%= link_to 'Random!', challenge_path(@challenge) %>
+
+      </div>
     </div>
-    <% end %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://vignette.wikia.nocookie.net/knife-hit/images/5/5b/KH_B8.png/revision/latest?cb=20180521175118')">
-      <%= link_to 'Random!', challenge_path(@challenge) %>
-    </div>
+
   </div>
+</div>
 

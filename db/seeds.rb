@@ -128,42 +128,40 @@ puts "Finished generating users"
 
 puts "Generating challenges"
 
-chicken = Challenge.new(name: "Chicken Dance",
-                        remote_photo_url: "https://media.giphy.com/media/3o752olKiKtMfQunzW/giphy.gif")
 
 pushups = Challenge.new(name: "Pushups",
-                        remote_photo_url: "https://media.giphy.com/media/PfFtibPKBbQrK/giphy.gif")
+                        remote_photo_url: "https://res.cloudinary.com/dyseqqsmw/image/upload/v1562170471/strong_1_pith7r.png")
 
-get_number = Challenge.new(name: "Get phone numbers",
-                           remote_photo_url: "https://media.giphy.com/media/11SIBu3s72Co8w/giphy.gif")
+the_dance = Challenge.new(name: "The Dance",
+                         remote_photo_url: "https://res.cloudinary.com/dyseqqsmw/image/upload/v1562170516/dancing_lrsyen.png")
+the_bill = Challenge.new(name: "The Bill",
+                           remote_photo_url: "https://res.cloudinary.com/dyseqqsmw/image/upload/v1562170590/earnings_qqhonj.png")
+the_phonecall = Challenge.new(name: "The Call",
+                         remote_photo_url: "https://res.cloudinary.com/dyseqqsmw/image/upload/v1562170550/phone-call_kme56d.png")
+the_shot = Challenge.new(name: "The Shot",
+                         remote_photo_url: "https://res.cloudinary.com/dyseqqsmw/image/upload/v1562170628/shot_zvlxd5.png")
+the_singing = Challenge.new(name: "The Singing",
+                         remote_photo_url: "https://res.cloudinary.com/dyseqqsmw/image/upload/v1562170667/microphone_1_ut5jam.png")
+the_airguitare = Challenge.new(name: "Air-guitar",
+                         remote_photo_url: "https://res.cloudinary.com/dyseqqsmw/image/upload/v1562170688/acoustic-guitar_1_ls8w5k.png")
+the_chilisauce = Challenge.new(name: "The Chili",
+                         remote_photo_url: "https://res.cloudinary.com/dyseqqsmw/image/upload/v1562170710/chili-pepper_1_stsg1a.png")
 
-macarena = Challenge.new(name: "The Macarena",
-                     remote_photo_url: "https://media.giphy.com/media/u6jNILpQWrF9C/giphy.gif")
 
-no_phone = Challenge.new(name: "No phone",
-                         remote_photo_url: "https://media.giphy.com/media/2yrq3JzXZWCa7x8Yrg/giphy.gif")
 
-chicken.save!
 pushups.save!
-get_number.save!
-macarena.save!
-no_phone.save!
+the_bill.save!
+the_phonecall.save!
+the_dance.save!
+the_shot.save!
+the_singing.save!
+the_airguitare.save!
+the_chilisauce.save!
 
 puts "Finished generating challenges"
 
 puts "Generating Levels"
 
-Level.create!(time: 10,
-              description: "Do the Dance for 10 steps",
-              challenge_id: chicken.id)
-
-Level.create!(time: 20,
-              description: "Add sound to the dance",
-              challenge_id: chicken.id)
-
-Level.create!(time: 30,
-              description: "Do it for 10 more steps",
-              challenge_id: chicken.id)
 
 # -------------------------
 
@@ -176,50 +174,105 @@ Level.create!(time: 20,
               challenge_id: pushups.id)
 
 Level.create!(time: 30,
-              description: "Each pushup should have a clap",
+              description: "Give each pushup a clap",
               challenge_id: pushups.id)
 
 # -------------------------
 
 Level.create!(time: 10,
-              description: "Get 1 phone number",
-              challenge_id: get_number.id)
+              description: "You pay a round of beers",
+              challenge_id: the_bill.id)
 
 Level.create!(time: 20,
-              description: "Get 3 phone numbers",
-              challenge_id: get_number.id)
+              description: "You add some nachos",
+              challenge_id: the_bill.id)
 
 Level.create!(time: 30,
-              description: "Get 5 phone numbers",
-              challenge_id: get_number.id)
+              description: "Time for some caviar!",
+              challenge_id: the_bill.id)
 
 # -------------------------
 
 Level.create!(time: 10,
-              description: "Dance the macarena for 1 minutes",
-              challenge_id: macarena.id)
+              description: "Do an impressive air guitare performance while entering the bar",
+              challenge_id: the_airguitare.id)
 
 Level.create!(time: 20,
-              description: "Dance the macarena for 3 minutes",
-              challenge_id: macarena.id)
+              description: "Scream very loud, and perform air guitare, hard-rock style!",
+              challenge_id: the_airguitare.id)
 
 Level.create!(time: 30,
-              description: "Dance the macarena while signing it",
-              challenge_id: macarena.id)
+              description: "Record yourself air guitaring and put on the socials networks!",
+              challenge_id: the_airguitare.id)
 
 # -------------------------
 
 Level.create!(time: 10,
-              description: "Don't use the phone for 30 min",
-              challenge_id: no_phone.id)
+              description: "Type a random number and talk with the person answering for minimum 30 seconds",
+              challenge_id: the_phonecall.id)
 
 Level.create!(time: 20,
-              description: "Don't use the phone for 1 hout",
-              challenge_id: no_phone.id)
+              description: "Type a random number, the person answering have to say the word 'eggplant'",
+              challenge_id: the_phonecall.id)
 
 Level.create!(time: 30,
-              description: "Don't use the phone at all",
-              challenge_id: no_phone.id)
+              description: "Call your ex",
+              challenge_id: the_phonecall.id)
+
+# -------------------------
+
+Level.create!(time: 10,
+              description: "Arrive in a nice moonalk dance!",
+              challenge_id: the_dance.id)
+
+Level.create!(time: 20,
+              description: "Arrive doing the chicken dance",
+              challenge_id: the_dance.id)
+
+Level.create!(time: 30,
+              description: "Arrive doing the chicken dance with a nice 'CockaDoodleDo!'",
+              challenge_id: the_dance.id)
+
+# -------------------------
+
+Level.create!(time: 10,
+              description: "You have to drink one shot!",
+              challenge_id: the_shot.id)
+
+Level.create!(time: 20,
+              description: "You have to drink one shot... WITHOUT THE HANDS!!",
+              challenge_id: the_shot.id)
+
+Level.create!(time: 30,
+              description: "You have 2 minutes... To take 3 shots!",
+              challenge_id: the_shot.id)
+
+# -------------------------
+Level.create!(time: 10,
+              description: "Enter the room singing opera!",
+              challenge_id: the_singing.id)
+
+Level.create!(time: 20,
+              description: "Sing your favorite language, but in another language...",
+              challenge_id: the_singing.id)
+
+Level.create!(time: 30,
+              description: "Record yourself rapping as fast as possible",
+              challenge_id: the_singing.id)
+
+# -------------------------
+
+Level.create!(time: 10,
+              description: "You have to drink a small spoon",
+              challenge_id: the_chilisauce.id)
+
+Level.create!(time: 20,
+              description: "The small spoon, is not enough, it's time for a shot!",
+              challenge_id: the_chilisauce.id)
+
+Level.create!(time: 30,
+              description: "Too late... Chili sauce bath!",
+              challenge_id: the_chilisauce.id)
 
 # -------------------------
 
@@ -265,7 +318,7 @@ puts "Finished generating Groups/Users"
 puts "Generating Videos"
 
 Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562147529/Ben_zoom_wbbrtf.mp4',
-              challenge_id: macarena.id,
+              challenge_id: the_singing.id,
               user_id: cuervo.id,
               tag: "Ben ZooOOooOOm")
 Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562147496/ben_push_up_xd76gz.mp4',
@@ -273,9 +326,9 @@ Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/uplo
               user_id: clara.id,
               tag: "Ben doesn't want to be late anymore!")
 Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562148319/Axel_chocken_dance_ynzlfo.mp4',
-              challenge_id: chicken.id,
+              challenge_id: the_dance.id,
               user_id: benya.id,
-              tag: "Chicken Dance")
+              tag: "Chicken Dance!")
 
 # Cloudinary::Uploader.upload("Test_video.mp4", :resource_type => :video)
 
