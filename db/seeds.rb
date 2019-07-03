@@ -264,14 +264,18 @@ puts "Finished generating Groups/Users"
 
 puts "Generating Videos"
 
-Video.create!(remote_video_url: 'http://res.cloudinary.com/dyseqqsmw/video/upload/v1562139890/Ben_zoom_d6f3od.mp4',
-              challenge_id: chicken.id,
+Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562147529/Ben_zoom_wbbrtf.mp4',
+              challenge_id: macarena.id,
               user_id: cuervo.id,
               tag: "Ben ZooOOooOOm")
-Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562140657/ben_push_up_t6w0u7.mp4',
+Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562147496/ben_push_up_xd76gz.mp4',
               challenge_id: pushups.id,
               user_id: clara.id,
               tag: "Ben doesn't want to be late anymore!")
+Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562145716/xs3vzzllej3ppx3j7syq.mp4',
+              challenge_id: chicken.id,
+              user_id: benya.id,
+              tag: "Chicken Dance")
 
 # Cloudinary::Uploader.upload("Test_video.mp4", :resource_type => :video)
 
