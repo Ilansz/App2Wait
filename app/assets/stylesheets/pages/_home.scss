@@ -5,8 +5,9 @@
   padding: 5% 0;
   background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), asset-url(home-page);
   //background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
-  height: 100vh;
-  position: relative;
+  height: 100%;
+
+
 }
 
 .home-page h1 {
@@ -20,8 +21,8 @@
 
 
 .home-page h3 {
+  font-weight: 800;
   color: $white;
-  font-weight: bold;
   //font-size: 25px;
   margin-top: 10%;
 }
@@ -29,14 +30,12 @@
 
 
 #sentences {
-  position: absolute;
-  top: 60%
+  padding-top: 70%;
 }
 
 #call-to-action {
-  // margin-top: 26%;
+  margin-top: 26%;
   font-size: 30px;
-  position: absolute;
-  bottom: 1%;
-  width: 90vw;
+  font-weight: 800;
+  color: $white;
 }
