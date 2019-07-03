@@ -1,22 +1,22 @@
 class EventsLevelsController < ApplicationController
   def new
-    @eventsLevel = EventsLevel.new
-    authorize @eventsLevel
+    @events_level = EventsLevel.new
+    authorize @events_level
   end
 
   def create
-    authorize @eventsLevel
+    authorize @events_level
   end
 
   def edit
-    authorize @eventsLevel
+    authorize @events_level
   end
 
   def update
-    authorize @eventsLevel
+    authorize @events_level
   end
 
   def destroy
-    authorize @eventsLevel
+    authorize @events_level
   end
 end
