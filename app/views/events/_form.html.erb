@@ -4,7 +4,7 @@
   <%= simple_form_for(@event) do |f| %>
 
     <div class="">
-      <%= f.association :group, collection: @groups, label: "Choose a group", prompt: "Who is late?", class: "flex-grow-1 w-100" %>
+      <%= f.association :group, collection: @groups, prompt: "Choose a group / friend", label: "Who is late?", class: "flex-grow-1 w-100" %>
     </div>
 
     <div class="form-actions d-flex justify-content-center">

@@ -1,16 +1,16 @@
-<div class="container group-form d-none">
-
+<div class="group-form d-none">
+  <br>
   <%= simple_form_for @group do |f| %>
 
     <div class="form-inputs">
-      <%= f.input :name %>
+      <%= f.input :name, label: "Group Name" %>
       <%= f.input :photo %>
       <%= f.input :photo_cache, as: :hidden %>
-      <%= select_tag("users", options_from_collection_for_select(User.all, 'id', 'username' ),  multiple: true, include_hidden: false) %>
+      <%= select_tag("users", options_from_collection_for_select(User.all, 'id', 'username' ), multiple: true, include_hidden: false) %>
     </div>
-
+    <br>
     <div class="form-actions d-flex justify-content-center">
-      <%= f.submit "Create a group", class: "btn btn-primary" %>
+      <%= f.submit "Create group", class: "btn btn-primary btn-block" %>
     </div>
   <% end %>
 

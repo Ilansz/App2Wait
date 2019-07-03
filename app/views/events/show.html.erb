@@ -1,19 +1,39 @@
-<div class="container">
+<div class="container mt-2">
+  <h4 class="text-center">Challenge for <strong><%= @event.group.name %></strong></h4>
 
-<p> <%= link_to "VIDEOS", videos_path, class: "btn btn-primary" %> </p>
+<h1>Timer</h1>
 
-<%= image_tag ( "https://media.giphy.com/media/l0HlHHTwgXMl4hTeE/giphy.gif") %>
+  <div class="card-product my-2 disabled" id="first-level">
+    <div class="card-time">
+      <h6><%= @event.events_levels.first.time %> min </h6>
+    </div>
+    <div class="card-product-infos">
+     <%= @event.events_levels.first.description %>
+   </div>
+ </div>
+   <div class="card-product my-2 disabled" id="second-level">
+    <div class="card-time">
+      <h6><%= @event.events_levels.second.time %> min </h6>
+    </div>
+    <div class="card-product-infos">
+     <%= @event.events_levels.second.description %>
+   </div>
+ </div>
+   <div class="card-product my-2 disabled" id="last-level">
+    <div class="card-time">
+      <h6><%= @event.events_levels.last.time %> min </h6>
+    </div>
+    <div class="card-product-infos">
+     <%= @event.events_levels.last.description %>
+   </div>
+ </div>
 
-<br>
-<br>
+<div class="btn btn-outline-primary btn-block" id="enable">test</div>
 
-<% @event.events_levels.each do |event_level| %>
-  <p> After <%= event_level.time %> minutes <%= event_level.description %> </p>
-<% end %>
+ <br>
+ <br>
 
-<br>
-<br>
-
-<%= link_to "remove", event_path(@event), method: :delete %>
+ <%= link_to "Cancel Challenge", event_path(@event), method: :delete, class: 'text-secondary' %>
 
 </div>
+
