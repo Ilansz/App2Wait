@@ -1,15 +1,17 @@
 
-<div class="card-product">
-  <div class="card-product-infos">
-   <h2> <%= t.text_field :description, disabled: :true, class: "disabled-input" %> </h2>
- </div>
-</div>
-<div class="card-time-edit mb-2">
-  <p class="mins-late"> Up to </p>
-  <div class="d-flex justify-content-center card-count">
-    <span type="button" id="minus"> - </span>
-    <%= t.text_field :time, as: :integer, id: "count" %>
-    <span type="button" id="plus"> + </span>
+<div class="card-event">
+  <div class="card-time-edit">
+    <p class="mins-late"> Up to </p>
+    <div class="d-flex justify-content-center card-count">
+      <span type="button" id="minus"> - </span>
+      <%= t.text_field :time, as: :integer, id: "count" %>
+      <span type="button" id="plus"> + </span>
+    </div>
+    <p class="mins-late"> minutes late </p>
   </div>
-  <p class="mins-late"> minutes late </p>
+  <div class="card-product mb-2">
+    <div class="card-product-infos">
+     <h2> <%= t.text_field :description, disabled: :true, class: "disabled-input" %> </h2>
+   </div>
+  </div>
 </div>
