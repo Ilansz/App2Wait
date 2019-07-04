@@ -142,7 +142,7 @@ the_shot = Challenge.new(name: "The Shot",
                          remote_photo_url: "https://res.cloudinary.com/dyseqqsmw/image/upload/v1562170628/shot_zvlxd5.png")
 the_singing = Challenge.new(name: "The Singing",
                          remote_photo_url: "https://res.cloudinary.com/dyseqqsmw/image/upload/v1562170667/microphone_1_ut5jam.png")
-the_airguitare = Challenge.new(name: "Air-guitar",
+the_airguitare = Challenge.new(name: "Air guitar",
                          remote_photo_url: "https://res.cloudinary.com/dyseqqsmw/image/upload/v1562170688/acoustic-guitar_1_ls8w5k.png")
 the_chilisauce = Challenge.new(name: "The Chili",
                          remote_photo_url: "https://res.cloudinary.com/dyseqqsmw/image/upload/v1562170710/chili-pepper_1_stsg1a.png")
@@ -174,17 +174,17 @@ Level.create!(time: 20,
               challenge_id: pushups.id)
 
 Level.create!(time: 30,
-              description: "Give each pushup a clap",
+              description: "Do each pushup with a clap",
               challenge_id: pushups.id)
 
 # -------------------------
 
 Level.create!(time: 10,
-              description: "You pay a round of beers",
+              description: "You pay a round of beer",
               challenge_id: the_bill.id)
 
 Level.create!(time: 20,
-              description: "You add some nachos",
+              description: "Get us nachos",
               challenge_id: the_bill.id)
 
 Level.create!(time: 30,
@@ -198,21 +198,21 @@ Level.create!(time: 10,
               challenge_id: the_airguitare.id)
 
 Level.create!(time: 20,
-              description: "Scream very loud, and perform air guitare, hard-rock style!",
+              description: "Do it in a rock-n-roll style!",
               challenge_id: the_airguitare.id)
 
 Level.create!(time: 30,
-              description: "Do an amazing air guitare performance and sing on top!",
+              description: "Do an amazing air guitare performance while singing along to it!",
               challenge_id: the_airguitare.id)
 
 # -------------------------
 
 Level.create!(time: 10,
-              description: "Type a random number and talk with the person answering for minimum 30 seconds",
+              description: "Type a random number and talk with the person answering for a minimum of 30 seconds",
               challenge_id: the_phonecall.id)
 
 Level.create!(time: 20,
-              description: "Type a random number, the person answering have to say the word 'eggplant'",
+              description: "Type a random number, the person answering has to say the word 'eggplant'",
               challenge_id: the_phonecall.id)
 
 Level.create!(time: 30,
@@ -230,7 +230,7 @@ Level.create!(time: 20,
               challenge_id: the_dance.id)
 
 Level.create!(time: 30,
-              description: "Arrive doing the chicken dance with a nice 'CockaDoodleDo!'",
+              description: "Arrive doing the chicken dance with a nice 'Cock-a-Doodle-Do!'",
               challenge_id: the_dance.id)
 
 # -------------------------
@@ -263,7 +263,7 @@ Level.create!(time: 30,
 # -------------------------
 
 Level.create!(time: 10,
-              description: "You have to drink a small spoon",
+              description: "You have to drink a small spoon of chilli sauce",
               challenge_id: the_chilisauce.id)
 
 Level.create!(time: 20,
@@ -271,7 +271,7 @@ Level.create!(time: 20,
               challenge_id: the_chilisauce.id)
 
 Level.create!(time: 30,
-              description: "Too late... Chili sauce bath!",
+              description: "Pour chilli sauce all over your face",
               challenge_id: the_chilisauce.id)
 
 # -------------------------
@@ -346,7 +346,7 @@ Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/uplo
 Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562240474/romy_vmjdew.mp4',
               challenge_id: the_shot.id,
               user_id: mel.id,
-              tag: "It was just the beginning...")
+              tag: "Twas the beginning of the night...")
 Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562240754/benya_f25z8u.mp4',
               challenge_id: the_airguitare.id,
               user_id: rabea.id,
