@@ -1,8 +1,11 @@
 import "bootstrap";
 import { toggleForm } from '../plugins/formToggle'
-import { enableTime } from '../plugins/timer'
 import { plusMinus } from '../plugins/plusMinus'
 
-toggleForm()
-enableTime()
+  const button = document.querySelector('#toggle-form')
+
+if(button) {
+  toggleForm();
+}
+
 plusMinus()

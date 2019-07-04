@@ -1,6 +1,3 @@
-const startButton = document.querySelector('.submit-event');
-
-
 const enableTime = () => {
   const firstTime = document.querySelector('#first-level');
   const secondTime = document.querySelector('#second-level');
@@ -12,7 +9,6 @@ const enableTime = () => {
 
   const firstChTime = (firstTime, showDiv) => {
     const finishTime = new Date(Date.parse(firstTime.dataset.finishTime));
-
     const finishSecs = finishTime.getSeconds() + finishTime.getMinutes() * 60
     setInterval(() => {
       let now = new Date(Date.now());
@@ -24,7 +20,7 @@ const enableTime = () => {
      let diffMin = Math.floor(difference / 60);
      let diffSec = difference % 60;
      showDiv.innerHTML = `${diffMin}:${diffSec}`
-     if (difference <= 0) {
+     if (difference < 1) {
       firstTime.classList.remove('disabled');
       showDiv.classList.add('d-none');
       firstTime.classList.add('bg-success');

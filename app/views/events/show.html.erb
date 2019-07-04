@@ -3,7 +3,6 @@
 
   <div class="card-product my-2 disabled" id="first-level" data-finish-time="<%= @event.events_levels.first.challenge_end_time %>">
     <div class="card-time firsttimer">
-    <!--  <h6><%= @event.events_levels.first.time %> min </h6> -->
     </div>
     <div class="card-product-infos">
      <%= @event.events_levels.first.description %>
@@ -11,7 +10,6 @@
  </div>
    <div class="card-product my-2 disabled" id="second-level" data-finish-time="<%= @event.events_levels.second.challenge_end_time %>">
     <div class="card-time secondtimer">
-      <!-- <h6><%= @event.events_levels.second.time %> min </h6> -->
     </div>
     <div class="card-product-infos">
      <%= @event.events_levels.second.description %>
@@ -19,7 +17,6 @@
  </div>
    <div class="card-product my-2 disabled" id="last-level" data-finish-time="<%= @event.events_levels.last.challenge_end_time %>">
     <div class="card-time lasttimer">
-      <!-- <h6><%= @event.events_levels.last.time %> min </h6> -->
     </div>
     <div class="card-product-infos">
      <%= @event.events_levels.last.description %>
@@ -33,3 +30,6 @@
 
 </div>
 
+<%= content_for :after_js do  %>
+  <%= javascript_pack_tag 'timer' %>
+<% end %>
