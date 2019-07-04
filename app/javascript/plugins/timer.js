@@ -9,10 +9,10 @@ const enableTime = () => {
 
   const firstChTime = (firstTime, showDiv) => {
     const finishTime = new Date(Date.parse(firstTime.dataset.finishTime));
-    const finishSecs = finishTime.getSeconds() + finishTime.getMinutes() * 60
+    const finishSecs = finishTime.getSeconds() + finishTime.getMinutes() * 60 + finishTime.getHours() * 3600
     setInterval(() => {
       let now = new Date(Date.now());
-      let beginSecs = now.getMinutes() * 60 + now.getSeconds()
+      let beginSecs = now.getMinutes() * 60 + now.getHours() * 3600 + now.getSeconds()
      // 1. get minutes in seconds () and get seoncds
      // 2. subtract finish from begin
      // 3. convert back to mins and seconds
