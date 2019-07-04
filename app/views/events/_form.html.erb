@@ -4,11 +4,11 @@
   <%= simple_form_for(@event) do |f| %>
 
     <div class="">
-      <%= f.association :group, collection: @groups, prompt: "Choose a group / Friend", label: "Who is late?", class: "flex-grow-1 w-100" %>
+      <%= f.association :group, collection: @groups, prompt: "Choose a group / Friend", label: "Select who is late:", class: "flex-grow-1 w-100" %>
     </div>
 
     <div class="form-actions d-flex justify-content-center">
-      <%= f.button :submit, value: "Pick thus challenge", class: "btn btn-primary btn-block" %>
+      <%= f.button :submit, value: "Pick this challenge", class: "btn btn-primary btn-block" %>
       <%= hidden_field_tag :challenge, @challenge.id %>
     </div>
   <% end %>
