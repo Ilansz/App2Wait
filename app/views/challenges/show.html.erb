@@ -5,6 +5,8 @@
   <div class='mb-3'>
     <%= cl_image_tag @challenge.photo, crop: :fill, class: 'card-category challenge-card' %>
   </div>
+  <h5 class="text-center mb-0"><ins> Challenge description:</ins></h5>
+  <p class="text-center"><small>* You can edit this later</small></p>
   <div>
     <% @challenge.levels.each do |level|%>
     <div class="card-product my-2">
