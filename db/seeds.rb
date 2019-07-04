@@ -202,7 +202,7 @@ Level.create!(time: 20,
               challenge_id: the_airguitare.id)
 
 Level.create!(time: 30,
-              description: "Record yourself air guitaring and put on the socials networks!",
+              description: "Do an amazing air guitare performance and sing on top!",
               challenge_id: the_airguitare.id)
 
 # -------------------------
@@ -222,7 +222,7 @@ Level.create!(time: 30,
 # -------------------------
 
 Level.create!(time: 10,
-              description: "Arrive in a nice moonalk dance!",
+              description: "Arrive in a nice moonalk move!",
               challenge_id: the_dance.id)
 
 Level.create!(time: 20,
@@ -253,11 +253,11 @@ Level.create!(time: 10,
               challenge_id: the_singing.id)
 
 Level.create!(time: 20,
-              description: "Sing your favorite language, but in another language...",
+              description: "Sing your favorite song, but in another language...",
               challenge_id: the_singing.id)
 
 Level.create!(time: 30,
-              description: "Record yourself rapping as fast as possible",
+              description: "Rap as fast as possible",
               challenge_id: the_singing.id)
 
 # -------------------------
@@ -267,7 +267,7 @@ Level.create!(time: 10,
               challenge_id: the_chilisauce.id)
 
 Level.create!(time: 20,
-              description: "The small spoon, is not enough, it's time for a shot!",
+              description: "The small spoon is not enough, it's time for a shot!",
               challenge_id: the_chilisauce.id)
 
 Level.create!(time: 30,
@@ -280,6 +280,12 @@ puts "Finished generating Levels"
 
 puts "Generating Groups"
 
+jo = Group.new(name: 'Joe',
+                   remote_photo_url: 'http://res.cloudinary.com/dn4gmiobc/image/upload/v1561978361/tjjoec9fy9yhh2qt2yup.png',
+                   user: ben)
+gabi = Group.new(name: 'Gaby',
+                   remote_photo_url: 'http://res.cloudinary.com/dn4gmiobc/image/upload/v1561978091/bvc2vczpy6isnjaeudox.png',
+                   user: cuervo)
 app2wait = Group.new(name: 'app2wait',
                     remote_photo_url: 'https://images-eu.ssl-images-amazon.com/images/I/61n252YpctL.png',
                     user: rabea)
@@ -292,6 +298,8 @@ france = Group.new(name: 'france',
                    remote_photo_url: 'https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg',
                    user: max)
 
+jo.save!
+gabi.save!
 app2wait.save!
 soccer.save!
 france.save!
@@ -299,6 +307,16 @@ france.save!
 puts "Finished generating Groups"
 
 puts "Generating Groups/Users"
+
+GroupsUser.create!(group_id: jo.id, user_id: cuervo.id)
+GroupsUser.create!(group_id: jo.id, user_id: ilan.id)
+GroupsUser.create!(group_id: jo.id, user_id: ben.id)
+GroupsUser.create!(group_id: jo.id, user_id: joe.id)
+
+GroupsUser.create!(group_id: gabi.id, user_id: cuervo.id)
+GroupsUser.create!(group_id: gabi.id, user_id: ilan.id)
+GroupsUser.create!(group_id: gabi.id, user_id: ben.id)
+GroupsUser.create!(group_id: gabi.id, user_id: joe.id)
 
 GroupsUser.create!(group_id: app2wait.id, user_id: cuervo.id)
 GroupsUser.create!(group_id: app2wait.id, user_id: ilan.id)
@@ -317,10 +335,6 @@ puts "Finished generating Groups/Users"
 
 puts "Generating Videos"
 
-Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562147529/Ben_zoom_wbbrtf.mp4',
-              challenge_id: the_singing.id,
-              user_id: cuervo.id,
-              tag: "Ben ZooOOooOOm")
 Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562147496/ben_push_up_xd76gz.mp4',
               challenge_id: pushups.id,
               user_id: clara.id,
@@ -329,6 +343,19 @@ Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/uplo
               challenge_id: the_dance.id,
               user_id: benya.id,
               tag: "Chicken Dance!")
+Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562240474/romy_vmjdew.mp4',
+              challenge_id: the_shot.id,
+              user_id: mel.id,
+              tag: "It was just the beginning...")
+Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562240754/benya_f25z8u.mp4',
+              challenge_id: the_airguitare.id,
+              user_id: rabea.id,
+              tag: "Elvis in da house")
+Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562241564/moon_walk_tqj7vw.mp4',
+              challenge_id: the_dance.id,
+              user_id: ben.id,
+              tag: "MooOOoon Waaaalk!")
+
 
 # Cloudinary::Uploader.upload("Test_video.mp4", :resource_type => :video)
 
