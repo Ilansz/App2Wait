@@ -6,24 +6,22 @@
     </div>
   </div>
 
-    <div class="container" >
-      <div class="cards">
-        <% @challenges.each do |challenge| %>
-        <%= link_to challenge_path(challenge) do %>
-        <div class="card-category" style="background-image: url(<%= challenge.photo %>)">
+  <div class="container" >
+    <div class="cards">
+      <% @challenges.each do |challenge| %>
+      <%= link_to challenge_path(challenge) do %>
+      <div class="card-category" style="background-image: url(<%= challenge.photo %>)">
 
-          <%#= link_to challenge.name, challenge_path(challenge)  %>
-          <p> <%= challenge.name %></p>
-        </div>
-        <% end %>
-        <% end %>
-        <div class="card-category mb-2" style="background-image: url('https://res.cloudinary.com/dyseqqsmw/image/upload/v1562170932/fortune-wheel_ehebze.png')">
-          <%= link_to 'Random!', challenge_path(@challenge) %>
-
-        </div>
+        <%#= link_to challenge.name, challenge_path(challenge)  %>
+        <p> <%= challenge.name %></p>
       </div>
-
+      <% end %>
+      <% end %>
+      <%= link_to challenge_path(@challenge) do %>
+      <div class="card-category mb-2" style="background-image: url('https://res.cloudinary.com/dyseqqsmw/image/upload/v1562170932/fortune-wheel_ehebze.png')">
+        <p> Random! </p>
+      </div>
+      <% end %>
     </div>
+  </div>
 </div>
-
-<h5 class="text-center my-3"> which will humiliate your friends </h5>
