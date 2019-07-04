@@ -29,6 +29,9 @@
 }
 
 .card-product .card-product-infos {
+  padding: 16px;
+  word-break: break-all;
+  hyphens: auto;
   padding: 3%;
 }
 
@@ -46,21 +49,7 @@
 
 .card-time h6 {
   vertical-align: middle;
-  padding: 14px;
-}
-
-.firsttimer {
-  padding: 16px;
-}
-.secondtimer {
-  padding: 16px;
-}
-.lasttimer {
-  padding: 16px;
-}
-
-.disabled {
-  opacity: 0.5;
+  padding: 10px;
 }
 
 .card-time input {
@@ -96,7 +85,7 @@
   position: relative;
 }
 
-.card-time-edit input {
+.card-time-edit select {
   width: 50vw;
   text-align: center;
   border: none;

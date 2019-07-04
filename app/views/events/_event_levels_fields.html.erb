@@ -4,7 +4,7 @@
     <p class="mins-late"> Up to </p>
     <div class="d-flex justify-content-center card-count">
       <span type="button" id="minus"> - </span>
-      <%= t.text_field :time, as: :integer, id: "count" %>
+      <%= t.select :time, options_for_select(1..60, start_t ), id: "count" %>
       <span type="button" id="plus"> + </span>
     </div>
     <p class="mins-late"> minutes late </p>
