@@ -1,6 +1,6 @@
 .card-product {
   overflow: hidden;
-  background: white;
+  background: $white;
   // box-shadow: 0 0 15px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
@@ -33,12 +33,13 @@
   word-break: break-all;
   hyphens: auto;
   padding: 3%;
+  background-color: $white;
 }
 
 .card-time {
   margin: 0;
   height: 64px;
-  width: 64px;
+  // width: 64px;
   background-color: #ffa63a;
   text-align: center;
   color: $white;
