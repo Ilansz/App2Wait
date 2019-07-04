@@ -1,6 +1,6 @@
 .card-product {
   overflow: hidden;
-  background: white;
+  background: $white;
   // box-shadow: 0 0 15px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
@@ -33,18 +33,20 @@
   word-break: break-all;
   hyphens: auto;
   padding: 3%;
+  background-color: $white;
 }
 
 .card-time {
   margin: 0;
   height: 64px;
-  width: 64px;
+  // width: 64px;
   background-color: #ffa63a;
   text-align: center;
   color: $white;
   font-weight: bold;
   top: 50%;
   justify-content: center;
+  min-width: 60px;
 }
 
 .card-time h6 {
@@ -72,7 +74,6 @@
     width: 500px;
     border: none;
 }
-
 .card-time-edit {
   margin: 0;
   height: 100%;
@@ -84,7 +85,6 @@
   padding: 5px;
   position: relative;
 }
-
 .card-time-edit select {
   width: 50vw;
   text-align: center;
@@ -97,7 +97,6 @@
   font-weight: 800;
   font-size: 20px;
 }
-
 #minus {
   position: absolute;
   left: 3%;
@@ -109,7 +108,6 @@
   font-weight: 800;
   font-size: 20px;
 }
-
 #plus {
   position: absolute;
   right: 3%;
@@ -121,13 +119,11 @@
   font-weight: 800;
   font-size: 20px;
 }
-
 .mins-late {
   margin: 0 auto;
   font-size: 13px;
   color: $black;
 }
-
 .card-event {
   border-radius: 4px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
