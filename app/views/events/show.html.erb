@@ -1,5 +1,7 @@
+  <div class="title">
+    <h4 class="text-center">Challenge for <strong><%= @event.group.name %></strong></h4>
+  </div>
 <div class="container mt-2">
-  <h4 class="text-center">Challenge for <strong><%= @event.group.name %></strong></h4>
 
   <div class="card-product my-2 disabled" id="first-level" data-finish-time="<%= @event.events_levels.first.challenge_end_time %>">
     <div class="card-time firsttimer">
@@ -8,32 +10,37 @@
      <%= @event.events_levels.first.description %>
    </div>
  </div>
-   <div class="card-product my-2 disabled" id="second-level" data-finish-time="<%= @event.events_levels.second.challenge_end_time %>">
-    <div class="card-time secondtimer">
-    </div>
-    <div class="card-product-infos">
-     <%= @event.events_levels.second.description %>
-   </div>
+ <div class="card-product my-2 disabled" id="second-level" data-finish-time="<%= @event.events_levels.second.challenge_end_time %>">
+  <div class="card-time secondtimer">
+  </div>
+  <div class="card-product-infos">
+   <%= @event.events_levels.second.description %>
  </div>
-   <div class="card-product my-2 disabled" id="last-level" data-finish-time="<%= @event.events_levels.last.challenge_end_time %>">
-    <div class="card-time lasttimer">
-    </div>
-    <div class="card-product-infos">
-     <%= @event.events_levels.last.description %>
-   </div>
+</div>
+<div class="card-product my-2 disabled" id="last-level" data-finish-time="<%= @event.events_levels.last.challenge_end_time %>">
+  <div class="card-time lasttimer">
+  </div>
+  <div class="card-product-infos">
+   <%= @event.events_levels.last.description %>
  </div>
- <br>
+</div>
+<br>
+</div>
 
-<h4 class="text-center">See some previous challenges!</h4>
- <%= link_to "Videos", videos_path, class: 'btn btn-outline-primary btn-block' %>
+<div class="title">
+<h5 class="text-center pt-3">See some previous challenges!</h5>
+</div>
 
- <br>
- <br>
+<div class="container">
+<%= link_to "Videos", videos_path, class: 'btn btn-primary btn-block h3', target: "_blank" %>
 
- <%= link_to "Cancel Challenge", event_path(@event), method: :delete, class: 'text-secondary' %>
+<br>
+<br>
+
+<%= link_to "Cancel Challenge", event_path(@event), method: :delete, class: 'text-secondary' %>
 
 </div>
 
 <%= content_for :after_js do  %>
-  <%= javascript_pack_tag 'timer' %>
+<%= javascript_pack_tag 'timer' %>
 <% end %>
