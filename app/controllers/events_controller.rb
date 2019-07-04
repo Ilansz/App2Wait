@@ -2,6 +2,7 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def show
+    # @levels = @event.eventsLevels.order(time: :ASC)
   end
 
   def new
