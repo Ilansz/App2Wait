@@ -31,7 +31,7 @@
 .card-product .card-product-infos {
   padding: 16px;
   word-break: break-all;
-  -ms-hyphens
+  hyphens: auto;
 }
 
 .card-time {
@@ -84,7 +84,7 @@
   position: relative;
 }
 
-.card-time-edit input {
+.card-time-edit select {
   width: 50vw;
   text-align: center;
   border: none;
