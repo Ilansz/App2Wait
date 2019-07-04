@@ -1,14 +1,24 @@
 {
-  "application.js": "/packs/js/application-c7b36a84dd3ff676d600.js",
-  "application.js.map": "/packs/js/application-c7b36a84dd3ff676d600.js.map",
+  "application.js": "/packs/js/application-fcb529486d34625c6576.js",
+  "application.js.map": "/packs/js/application-fcb529486d34625c6576.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-c7b36a84dd3ff676d600.js"
+        "/packs/js/application-fcb529486d34625c6576.js"
       ],
       "js.map": [
-        "/packs/js/application-c7b36a84dd3ff676d600.js.map"
+        "/packs/js/application-fcb529486d34625c6576.js.map"
+      ]
+    },
+    "timer": {
+      "js": [
+        "/packs/js/timer-ce2138b08f011300c9e1.js"
+      ],
+      "js.map": [
+        "/packs/js/timer-ce2138b08f011300c9e1.js.map"
       ]
     }
-  }
+  },
+  "timer.js": "/packs/js/timer-ce2138b08f011300c9e1.js",
+  "timer.js.map": "/packs/js/timer-ce2138b08f011300c9e1.js.map"
 }
