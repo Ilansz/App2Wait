@@ -1,6 +1,6 @@
 .card-product {
   overflow: hidden;
-  background: $white;
+  background: white;
   // box-shadow: 0 0 15px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
@@ -23,9 +23,13 @@
 .card-product p {
   font-size: 12px;
   line-height: 1.4;
-  opacity: .7;
+  // opacity: .7;
   margin-bottom: 0;
-  margin-top: 8px;
+  // margin-top: 8px;
+}
+
+.very-late {
+  padding-top: 3%;
 }
 
 .card-product .card-product-infos {
@@ -36,24 +40,35 @@
   // background-color: $white;
 }
 
+.card-product .card-product-infos-ch {
+  word-break: break-all;
+  hyphens: auto;
+  padding-top: 3%;
+  padding-left: 3%;
+  background-color: white;
+}
+
 .card-time {
   margin: 0;
   height: 64px;
   // width: 64px;
   background-color: #ffa63a;
   text-align: center;
-  color: $white;
+  color: white;
   font-weight: bold;
   top: 50%;
   justify-content: center;
   min-width: 60px;
   font-size: 21px;
-  padding-top: 4%;
 }
 
 .card-time h6 {
   vertical-align: middle;
   padding: 10px;
+}
+
+.card-time p{
+  font-size: 16px;
 }
 
 .card-time input {
