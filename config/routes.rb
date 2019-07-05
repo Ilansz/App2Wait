@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :events, only: [:show, :new, :create, :edit, :update, :destroy]
   resources :events_levels, only: [:new]
   resources :groups
-  resources :videos, only: [:index, :show, :new, :create, :destroy]
+  resources :videos, only: [:index, :new, :create, :destroy]
 end
