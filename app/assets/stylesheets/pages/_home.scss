@@ -1,9 +1,13 @@
 // Specific CSS for your home-page
 .home-page {
-  background-size: cover;
-  background-position: center;
+  background: asset-url('giff.gif');
+  background-size: 340px;
+  background-color: white;
+  // background-size: 375px;
+  // background-repeat: no-repeat;
+  background-position: 50% 21%;
   padding: 5% 0;
-  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), asset-url(home-page);
+  background-repeat: no-repeat;
   //background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   height: 100vh;
 
@@ -11,32 +15,41 @@
 }
 
 .home-page h1 {
-  margin: 10%;
-  color: $white;
+  // margin: 8%;
+  color: $orange;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
   text-align: center;
+  border: 2px black;
+  text-shadow:
+    1px  1px 2px black,
+    1px -1px 2px black,
+   -1px  1px 2px black,
+   -1px -1px 2px black;
 }
 
 
 .home-page h4 {
-  font-weight: 800;
-  color: $white;
+  color: black;
   //font-size: 25px;
   margin-top: 4%;
-  text-align: left;
+  // text-align: left;
+  font-weight: 700;
 }
 
 
 
-#sentences {
-  padding-top: 75%;
+#sentences{
+  padding-top: 100%;
+  color: black;
+  text-align: center;
 }
 
 #call-to-action {
   margin-top: 5%;
   font-size: 30px;
   font-weight: 800;
-  color: $white;
+  // color: black;
+  // border: solid 1px;
 }
