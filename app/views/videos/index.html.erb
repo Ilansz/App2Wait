@@ -1,7 +1,3 @@
-
-
-
-
 <% @videos.each do |v| %>
   <div class="card-trip">
       <%= cl_video_tag(v.video_url.to_s, :controls => true, :poster => true) %>
