@@ -1,32 +1,8 @@
 <div class="card-event">
-<<<<<<< HEAD
 
   <div class="card-event-description">
     <p> <%= description %> </p>
     <%= t.hidden_field :time, as: :hidden  %>
-=======
-  <div class="card-time-edit">
-    <p class="mins-late"> Up to </p>
-    <div class="d-flex justify-content-center card-count">
-      <span type="button" id="minus"> - </span>
-      <%= t.select :time, options_for_select(1..60, start_t ), id: "count" %>
-      <span type="button" id="plus"> + </span>
-    </div>
-    <p class="mins-late"> minutes late </p>
-  </div>
-  <div class="card-product mb-2">
-    <div class="card-product-infos">
-     <h2> <%= t.text_field :description, disabled: :true, class: "disabled-input" %> </h2>
-   </div>
-  </div>
-</div>
-
-<!-- <div class="card-event">
-
-  <div class="card-event-description">
-    <p> <%#= t.text_field :description, disabled: :true, class: "disabled-input" %> </p>
-
->>>>>>> 0c3f4dcaef853e277784fbe87356ea4b74ed6c64
   </div>
   <div class="card-times" id="form_group_<%= t.index %>">
     <div class="btn btn-outline-primary font-weight-bold btn-time" value="5">5</div>
@@ -36,9 +12,4 @@
     <div class="btn btn-outline-primary font-weight-bold btn-time" value="25">25</div>
   </div>
 
-<<<<<<< HEAD
 </div>
-=======
-</div> -->
-
->>>>>>> 0c3f4dcaef853e277784fbe87356ea4b74ed6c64
