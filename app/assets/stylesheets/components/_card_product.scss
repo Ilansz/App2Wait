@@ -84,13 +84,6 @@
   justify-content: center;
 }
 
-.disabled-input {
-    color: $black;
-    font-weight: bold;
-    background-color: $white;
-    width: 500px;
-    border: none;
-}
 .card-time-edit {
   margin: 0;
   height: 100%;
@@ -144,4 +137,26 @@
 .card-event {
   border-radius: 4px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  background-color: $white;
+  padding: 2%;
+  margin-bottom: 5px;
+}
+
+.disabled-input {
+    color: $black;
+    font-weight: bold;
+    background-color: $white;
+    width: 100%;
+    border: none;
+}
+
+.card-times {
+  background-color: $white;
+  display: flex;
+  justify-content: space-evenly;
+  button {
+    width: 15%;
+    background-color: $orange;
+    color: $white;
+  }
 }
