@@ -4,6 +4,10 @@ class EventsController < ApplicationController
   def show
     @video = Video.new
     @challenge = Challenge.find_by(name: @event.name)
+    # @group = Group.find(@event.group.id)
+
+    mail = EventMailer.with(event: @event).launched
+    mail.deliver_now
   end
 
   def new
@@ -29,6 +33,8 @@ class EventsController < ApplicationController
         @eventsLevels = EventsLevel.new(time: one_level.time, description: one_level.description, event_id: @event.id)
         @eventsLevels.save
       end
+
+
       redirect_to edit_event_path(@event)
     else
       render :new
