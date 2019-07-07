@@ -57,17 +57,25 @@
       </div>
     </div>
   </div>
+
+
   <div class="groups mt-3">
     <h4 class="mt-2">Select who is being late:</h4>
-   <%= render 'events/form' %>
- </div>
- <p class="text-center mb-1 mt-1">------------</p>
- <div class="btn btn-outline-primary btn-block" id="toggle-form">Create a group</div>
-
- <%= render 'groups/form' %>
- <br>
- <%= link_to "Back to all Challenges", challenges_path, class: 'text-secondary'%>
-<!-- </div> -->
 <br>
+
+
+    <%= render 'events/form' %>
+  <p class="text-center mb-1 mt-1">------------</p>
+    <div class="container">
+      <div class="btn btn-primary btn-block justify-content-end" id="toggle-form" >
+        <p><strong>➕</strong></p>
+      </div>
+      <%= render 'groups/form' %>
+    </div>
+  </div>
+  <br>
+  <%= link_to "Back to all Challenges", challenges_path, class: 'text-secondary'%>
+  <!-- </div> -->
+  <br>
 
 
