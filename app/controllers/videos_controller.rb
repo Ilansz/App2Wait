@@ -3,6 +3,8 @@ class VideosController < ApplicationController
 
   def index
     @videos = policy_scope(Video)
+    @user = current_user
+    @event = Event.find(@user.events.last.id)
   end
 
   # def show
