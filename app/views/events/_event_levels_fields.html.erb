@@ -1,35 +1,36 @@
-<!-- <div class="card-event">
+<div class="card-event">
   <div class="card-time-edit">
     <p class="mins-late"> Up to </p>
     <div class="d-flex justify-content-center card-count">
       <span type="button" id="minus"> - </span>
-      <%#= t.select :time, options_for_select(1..60, start_t ), id: "count" %>
+      <%= t.select :time, options_for_select(1..60, start_t ), id: "count" %>
       <span type="button" id="plus"> + </span>
     </div>
     <p class="mins-late"> minutes late </p>
   </div>
   <div class="card-product mb-2">
     <div class="card-product-infos">
-     <h2> <%#= t.text_field :description, disabled: :true, class: "disabled-input" %> </h2>
+     <h2> <%= t.text_field :description, disabled: :true, class: "disabled-input" %> </h2>
    </div>
   </div>
-</div> -->
-
+</div>
+<!--
 <div class="card-event">
 
   <div class="card-event-description">
-    <p> <%= t.text_field :description, disabled: :true, class: "disabled-input" %> </p>
+    <p> <%#= t.text_field :description, disabled: :true, class: "disabled-input" %> </p>
 
   </div>
 
   <div class="card-times">
-    <button class="btn btn-outline-primary btn-lg">5</button>
-    <button class="btn btn-outline-primary btn-lg">10</button>
-    <button class="btn btn-outline-primary btn-lg">15</button>
-    <button class="btn btn-outline-primary btn-lg">20</button>
-    <button class="btn btn-outline-primary btn-lg">25</button>
+    <button class="btn btn-outline-primary font-weight-bold btn-time">5</button>
+    <button class="btn btn-outline-primary btn-lg font-weight-bold">10</button>
+    <button class="btn btn-outline-primary btn-lg font-weight-bold">15</button>
+    <button class="btn btn-outline-primary btn-lg font-weight-bold">20</button>
+    <button class="btn btn-outline-primary btn-lg font-weight-bold">25</button>
 
   </div>
 
 </div>
 
+ -->
