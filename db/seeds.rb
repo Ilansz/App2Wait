@@ -222,7 +222,7 @@ Level.create!(time: 30,
 # -------------------------
 
 Level.create!(time: 10,
-              description: "Arrive in a nice moonalk move!",
+              description: "Arrive in a nice MoonWalk move!",
               challenge_id: the_dance.id)
 
 Level.create!(time: 20,
