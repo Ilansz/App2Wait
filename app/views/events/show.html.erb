@@ -2,7 +2,7 @@
     <%= link_to challenges_path, class: "navbar-brand" do %>
     <%= image_tag asset_url('logo.png') %>
     <% end %>
-    <h5 class="text-center mt-2">Wating for <%= @event.group.name %></h5>
+    <h5 class="text-center mt-1">Wating for<br><%= @event.group.name %></h5>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,7 +32,7 @@
   <div class="gif">
     <img src="https://cdn.dribbble.com/users/1498470/screenshots/4498386/hourglass.gif" alt="Time" id="time-gif">
   </div>
-
+  <div class="transition"></div>
   <div class="container mt-2">
     <div class="card-product my-2 disabled" id="first-level" data-finish-time="<%= @event.events_levels.first.challenge_end_time %>">
       <div class="card-time firsttimer">
