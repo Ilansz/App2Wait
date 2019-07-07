@@ -21,7 +21,7 @@ class VideosController < ApplicationController
     @challenge = Challenge.find(params[:challenge_id])
     @video.challenge = @challenge
     authorize @video
-    @video.save!
+    @video.save
     redirect_to videos_path
   end
 
