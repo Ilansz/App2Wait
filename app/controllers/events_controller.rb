@@ -6,8 +6,6 @@ class EventsController < ApplicationController
     @challenge = Challenge.find_by(name: @event.name)
     # @group = Group.find(@event.group.id)
 
-    mail = EventMailer.with(event: @event).launched
-    mail.deliver_now
   end
 
   def new
@@ -57,6 +55,8 @@ class EventsController < ApplicationController
         render :edit and return
       end
     end
+    mail = EventMailer.with(event: @event).launched
+    mail.deliver_now
     redirect_to event_path(@event)
   end
 
