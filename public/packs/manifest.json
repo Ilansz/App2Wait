@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "application.js": "/packs/js/application-cac6924f6333d4b038b1.js",
   "application.js.map": "/packs/js/application-cac6924f6333d4b038b1.js.map",
   "entrypoints": {
@@ -9,17 +8,6 @@
       ],
       "js.map": [
         "/packs/js/application-cac6924f6333d4b038b1.js.map"
-=======
-  "application.js": "/packs/js/application-9c4096ae53d775339881.js",
-  "application.js.map": "/packs/js/application-9c4096ae53d775339881.js.map",
-  "entrypoints": {
-    "application": {
-      "js": [
-        "/packs/js/application-9c4096ae53d775339881.js"
-      ],
-      "js.map": [
-        "/packs/js/application-9c4096ae53d775339881.js.map"
->>>>>>> 0c3f4dcaef853e277784fbe87356ea4b74ed6c64
       ]
     },
     "timer": {
