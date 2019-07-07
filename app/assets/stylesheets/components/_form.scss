@@ -1,0 +1,24 @@
+#form-group label {
+  background-color: $orange;
+  width: 100%;
+  text-align:center;
+  font-size: 24px;
+  margin-left: -9px;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  opacity:0.6;
+  border-radius: 5px;
+
+}
+
+
+#form-group input {
+  height: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  // margin-left: 90px;
+}
+
+.form-check-input {
+  opacity: 0;
+}
