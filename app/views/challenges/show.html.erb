@@ -34,7 +34,7 @@
   <div>
     <div class="card-product my-2">
       <div class="card-time">
-        <p><br>Late</p>
+        <%=  image_tag asset_url('quarter.png')%>
       </div>
       <div class="card-product-infos-ch">
         <h6>  <%= @challenge.levels.first.description %> </h6>
@@ -42,7 +42,7 @@
     </div>
     <div class="card-product my-2">
       <div class="card-time very-late">
-        <p>    Very<br>late</p>
+        <%=  image_tag asset_url('half-an-hour.png')%>
       </div>
       <div class="card-product-infos-ch">
         <h6>  <%= @challenge.levels.second.description %> </h6>
@@ -50,7 +50,7 @@
     </div>
     <div class="card-product my-2">
       <div class="card-time">
-        <p>Very,<br>very,<br>late</p>
+        <%=  image_tag asset_url('three-quarters.png')%>
       </div>
       <div class="card-product-infos-ch">
         <h6>  <%= @challenge.levels.last.description %> </h6>

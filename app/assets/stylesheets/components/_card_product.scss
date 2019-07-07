@@ -1,6 +1,6 @@
 .card-product {
   overflow: hidden;
-  background: white;
+  background: $white;
   // box-shadow: 0 0 15px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
@@ -28,14 +28,10 @@
   // margin-top: 8px;
 }
 
-.very-late {
-  padding-top: 3%;
-}
-
 .card-product .card-product-infos {
   padding: 16px;
-  word-break: break-all;
-  hyphens: auto;
+  // word-break: break-all;
+  // hyphens: auto;
   padding: 3%;
   // background-color: $white;
 }
@@ -60,6 +56,11 @@
   justify-content: center;
   min-width: 60px;
   font-size: 21px;
+}
+.card-time img{
+  height: 80%;
+  margin-top: 6px;
+
 }
 
 .card-time h6 {

@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :groups_users
   has_many :groups, through: :groups_users
   has_many :owned_groups, foreign_key: "user_id", class_name: "Group"
-
+  has_many :events, through: :groups
 
   mount_uploader :photo, PhotoUploader
   validates :username, presence: true
