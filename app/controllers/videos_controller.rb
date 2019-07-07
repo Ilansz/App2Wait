@@ -1,14 +1,14 @@
 class VideosController < ApplicationController
-  before_action :set_video, only: [:show, :edit, :update, :destroy]
+  before_action :set_video, only: [:edit, :update, :destroy]
 
   def index
     @videos = policy_scope(Video)
   end
 
-  def show
-    @video = Video.find(params[:id])
-    authorize @video
-  end
+  # def show
+  #   @video = Video.find(params[:id])
+  #   authorize @video
+  # end
 
   def new
     @video = Video.new
@@ -18,7 +18,8 @@ class VideosController < ApplicationController
   def create
     @video = Video.new(video_params)
     @video.user = current_user
-    @video.challenge = Challenge.find(params[:video][:challenge])
+    @challenge = Challenge.find(params[:challenge_id])
+    @video.challenge = @challenge
     authorize @video
     @video.save
     redirect_to videos_path
@@ -36,6 +37,6 @@ class VideosController < ApplicationController
   end
 
   def video_params
-    params.require(:video).permit(:tag, :challenge_id, :video)
+    params.require(:video).permit(:tag, :video)
   end
 end

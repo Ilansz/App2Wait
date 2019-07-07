@@ -2,7 +2,8 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def show
-    # @levels = @event.eventsLevels.order(time: :ASC)
+    @video = Video.new
+    @challenge = Challenge.find_by(name: @event.name)
   end
 
   def new

@@ -1,13 +1,34 @@
 {
+<<<<<<< HEAD
   "application.js": "/packs/js/application-100d01ad6639029a808f.js",
   "application.js.map": "/packs/js/application-100d01ad6639029a808f.js.map",
+=======
+<<<<<<< HEAD
+  "application.js": "/packs/js/application-2e96b22f932eebdc8aa5.js",
+  "application.js.map": "/packs/js/application-2e96b22f932eebdc8aa5.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-2e96b22f932eebdc8aa5.js"
+      ],
+      "js.map": [
+        "/packs/js/application-2e96b22f932eebdc8aa5.js.map"
+=======
+  "application.js": "/packs/js/application-d98d83fe925e4398bc8a.js",
+  "application.js.map": "/packs/js/application-d98d83fe925e4398bc8a.js.map",
+>>>>>>> c0793f276426270c910df41f4a752b7bbc7f727c
   "entrypoints": {
     "application": {
       "js": [
         "/packs/js/application-100d01ad6639029a808f.js"
       ],
       "js.map": [
+<<<<<<< HEAD
         "/packs/js/application-100d01ad6639029a808f.js.map"
+=======
+        "/packs/js/application-d98d83fe925e4398bc8a.js.map"
+>>>>>>> master
+>>>>>>> c0793f276426270c910df41f4a752b7bbc7f727c
       ]
     },
     "timer": {
