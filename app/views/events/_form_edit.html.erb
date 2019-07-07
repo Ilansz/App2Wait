@@ -1,10 +1,10 @@
 <%= form_for(@event) do |f| %>
 <% i = 0 %>
   <%= f.fields_for :events_levels, @event.events_levels.sort_by(&:time) do |t|  %>
-  <%= render 'event_levels_fields', t: t , start_t: @event.events_levels[i].time.to_i  %>
+  <%= render 'event_levels_fields', t: t , start_t: @event.events_levels[i].time.to_i, description: @event.events_levels[i].description %>
   <% i += 1 %>
   <% end %>
   <div class="d-flex justify-content-center">
-    <%= f.button :submit, class: "btn btn-primary w-100 font-weight-bolder mb-2" %>
+    <%= f.button "🚀", class: "btn btn-primary w-100 font-weight-bolder mb-2" %>
   </div>
 <% end %>
