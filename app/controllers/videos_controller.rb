@@ -4,9 +4,14 @@ class VideosController < ApplicationController
 
   def index
     @videos = policy_scope(Video)
-    @user = current_user
-    if @user.events.last
-      @event = Event.find(@user.events.last.id)
+    if params[:query].present?
+      @videos = Video.search_video(params[:query])
+      # raise
+    else
+      @user = current_user
+      if @user.events.last
+        @event = Event.find(@user.events.last.id)
+      end
     end
   end
 

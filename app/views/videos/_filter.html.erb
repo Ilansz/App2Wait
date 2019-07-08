@@ -1,0 +1,7 @@
+<%= form_tag videos_path, method: :get do %>
+  <%= select_tag :query,
+    options_for_select(["Pushups", "The Bill", "The Call", "The Dance", "The Shot", "The Singing", "Air Guitar", "The Chili"]), prompt: "Select a challenge",
+    class: "form-control"
+  %>
+  <%= submit_tag "Find", name: nil, class: 'btn btn-primary' %>
+<% end %>
