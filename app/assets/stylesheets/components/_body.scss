@@ -27,3 +27,12 @@ a:hover {
 .edit-disclaimer {
   font-size: 15px;
 }
+
+@media(min-width: 600px) {
+  .show {
+    display: none;
+  }
+  .msg {
+    color: $black;
+  }
+}
