@@ -11,12 +11,18 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <% if !current_page?(root_path) %>
-    <% end %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
-    <%= yield(:after_js) %>
+    <div class="show">
+      <% if !current_page?(root_path) %>
+      <% end %>
+      <%= render 'shared/flashes' %>
+      <%= yield %>
+      <%= javascript_include_tag 'application' %>
+      <%= javascript_pack_tag 'application' %>
+      <%= yield(:after_js) %>
+    </div>
+     <p class="msg text-center"> This site has been designed for mobile devices. </p>
+     <p class="msg text-center"> To check it out please switch to a mobile view. </p>
+     <p class="msg text-center"> Sincerely, </p>
+     <p class="msg text-center"> the app2wait team </p>
   </body>
 </html>
