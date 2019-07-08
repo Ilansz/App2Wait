@@ -43,5 +43,9 @@
   </div>
 <% end %>
 <br>
-<%= link_to "Back to challenge",@event, class: 'btn btn-primary btn-block' %>
+<% if @event %>
+  <%= link_to "Back to challenge",@event, class: 'btn btn-primary btn-block' %>
+<% else %>
+  <%= link_to "Back to challenges", challenges_path, class: 'btn btn-primary btn-block' %>
+<% end %>
 <br>

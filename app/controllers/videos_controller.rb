@@ -1,10 +1,13 @@
 class VideosController < ApplicationController
   before_action :set_video, only: [:edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index]
 
   def index
     @videos = policy_scope(Video)
     @user = current_user
-    @event = Event.find(@user.events.last.id)
+    if @user.events.last
+      @event = Event.find(@user.events.last.id)
+    end
   end
 
   # def show
