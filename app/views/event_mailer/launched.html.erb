@@ -1,5 +1,11 @@
-<h1>Event#launched</h1>
+<h1>App2Wait</h1>
+<img src="https://media.giphy.com/media/1iTH1WIUjM0VATSw/giphy.gif" alt="Stalone running">
 
-<p>
-  A challenge have been launched on the group: <%= @group.name %>
-</p>
+
+<h4>Hey <%= @group.user.username %>,</h4>
+
+<p>A challenge have been launched in the group: <%= @group.name %>,</p>
+<p>you better hurry if you don't want to have to do crazy challenges!</p>
+
+<h2>Check the challenge: </h2>
+<%= link_to "<%= @event.name %>", event_url(@event)  %>
