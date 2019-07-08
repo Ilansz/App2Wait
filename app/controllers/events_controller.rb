@@ -1,9 +1,13 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:show]
+
 
   def show
     @video = Video.new
     @challenge = Challenge.find_by(name: @event.name)
+    # @group = Group.find(@event.group.id)
+
   end
 
   def new
@@ -29,6 +33,8 @@ class EventsController < ApplicationController
         @eventsLevels = EventsLevel.new(time: one_level.time, description: one_level.description, event_id: @event.id)
         @eventsLevels.save
       end
+
+
       redirect_to edit_event_path(@event)
     else
       render :new
@@ -51,6 +57,8 @@ class EventsController < ApplicationController
         render :edit and return
       end
     end
+    mail = EventMailer.with(event: @event).launched
+    mail.deliver_now
     redirect_to event_path(@event)
   end
 
