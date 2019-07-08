@@ -21,9 +21,15 @@
       <%= javascript_pack_tag 'application' %>
       <%= yield(:after_js) %>
     </div>
-     <p class="msg text-center"> This site has been designed for mobile devices. </p>
-     <p class="msg text-center"> To check it out please switch to a mobile view. </p>
-     <p class="msg text-center"> Sincerely, </p>
-     <p class="msg text-center"> the app2wait team </p>
+    <div class="msg">
+      <h1>App2Wait</h1>
+      <br>
+      <br>
+      <br>
+      <p class="text-center"> This site has been designed for mobile devices. </p>
+      <p class="text-center"> To check it out please switch to a mobile view. </p>
+      <p class="text-center"> Sincerely, </p>
+      <p class="text-center"> the App2Wait team <%= image_tag asset_url('logo.png') %> </p>
+    </div>
   </body>
 </html>

@@ -1,10 +1,22 @@
 class VideosController < ApplicationController
   before_action :set_video, only: [:edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index]
 
   def index
+    @challenges = Challenge.joins(:videos)
     @videos = policy_scope(Video)
-    @user = current_user
-    @event = Event.find(@user.events.last.id)
+    if params[:query].present?
+      @videos = Video.where(challenge_id: params[:query])
+      respond_to do |format|
+        format.html
+        format.js
+      end
+    else
+      @user = current_user
+      if @user.events.last
+        @event = Event.find(@user.events.last.id)
+      end
+    end
   end
 
   # def show
