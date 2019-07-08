@@ -9,4 +9,4 @@ toggleForm();
 plusMinus();
 toggleVideo();
 selector();
-timeSelector();
+// timeSelector();
