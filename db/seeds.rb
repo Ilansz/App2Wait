@@ -24,7 +24,7 @@ marko = User.new(email: 'marko@app2wait.com',
             remote_photo_url: 'http://res.cloudinary.com/dn4gmiobc/image/upload/v1561978082/gxn0tymnoggmdbhayhfn.png',
             average_lateness: rand(0..25))
 
-ben = User.new(email: 'ben@app2wait.com',
+ben = User.new(email: 'ben.attali8@gmail.com',
             password: '123456',
             username: 'Ben',
             remote_photo_url: 'http://res.cloudinary.com/dn4gmiobc/image/upload/v1561978084/f0ts7c7y3p6xmngnckxo.png',
@@ -60,7 +60,7 @@ gaby = User.new(email: 'gaby@app2wait.com',
             remote_photo_url: 'http://res.cloudinary.com/dn4gmiobc/image/upload/v1561978091/bvc2vczpy6isnjaeudox.png',
             average_lateness: rand(0..25))
 
-ilan = User.new(email: 'ilan@app2wait.com',
+ilan = User.new(email: 'szenkerilan@gmail.com',
             password: '123456',
             username: 'Ilan',
             remote_photo_url: 'http://res.cloudinary.com/dn4gmiobc/image/upload/v1561978092/nfsqulkptkrpbljaujdi.png',
