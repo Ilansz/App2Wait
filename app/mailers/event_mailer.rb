@@ -15,7 +15,7 @@ class EventMailer < ApplicationMailer
     end
 
     emails.each do |email|
-      mail to: email
+      mail to: email, subject: "You've been challenged on App2Wait!"
     end
     # raise
   end
