@@ -12,7 +12,7 @@ puts "Challenge destroy"
 
 puts "Generating Users"
 
-cuervo = User.new(email: 'axel@app2wait.com',
+cuervo = User.new(email: 'axelresnik@gmail.com',
             password: '123456',
             username: 'Cuervo',
             remote_photo_url: 'https://res.cloudinary.com/dn4gmiobc/image/upload/v1561971341/dkimxfxzsauhsl7ijsvh.png',
