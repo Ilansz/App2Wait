@@ -3,10 +3,14 @@ class VideosController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
   def index
+    @challenges = Challenge.joins(:videos)
     @videos = policy_scope(Video)
     if params[:query].present?
-      @videos = Video.search_video(params[:query])
-      # raise
+      @videos = Video.where(challenge_id: params[:query])
+      respond_to do |format|
+        format.html
+        format.js
+      end
     else
       @user = current_user
       if @user.events.last

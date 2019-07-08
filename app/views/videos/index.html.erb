@@ -30,19 +30,9 @@
     </ul>
   </div>
 </div>
-
-<% @videos.each do |v| %>
-  <div class="card-trip">
-      <%= cl_video_tag(v.video_url.to_s, :controls => true, :poster => true) %>
-    <div class="card-trip-infos">
-      <div>
-      <h2> <%= v.tag %>  </h2>
-      <p> <strong>Challenge:</strong>  <%= v.challenge.name %></p>
-      </div>
-      <%= cl_image_tag (v.user.photo), class:"card-trip-user avatar-bordered" %>
-    </div>
-  </div>
-<% end %>
+<div class="all-videos">
+  <%= render 'videos', videos: @videos %>
+</div>
 <br>
 <% if @event %>
   <%= link_to "Back to challenge",@event, class: 'btn btn-primary btn-block' %>
