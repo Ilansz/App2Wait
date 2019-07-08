@@ -1,4 +1,3 @@
-<%= render 'filter' %>
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon mb-3">
   <%= link_to challenges_path, class: "navbar-brand" do %>
   <%= image_tag asset_url('logo.png') %>
@@ -30,6 +29,7 @@
     </ul>
   </div>
 </div>
+<%= render 'filter' %>
 <div class="all-videos">
   <%= render 'videos', videos: @videos %>
 </div>
