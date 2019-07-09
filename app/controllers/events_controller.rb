@@ -18,24 +18,28 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    @event.group = Group.find(params[:event][:group_id])
+    # @event_level = EventsLevel.find(event_level[:id])
     if params[:challenge]
       @challenge = Challenge.find(params[:challenge])
       @event.name = @challenge.name
       @event.photo = @challenge.photo.url
+      @event.group = Group.find(params[:event][:group_id])
+      @event.save
     else
       redirect_to challenges_path
-    end
+  end
+
     authorize @event
     if @event.save!
-      @challenge.levels.each do |level|
+      @challenge.levels.sort_by(&:time).each do |level|
         one_level = Level.find(level.id)
-        @eventsLevels = EventsLevel.new(time: one_level.time, description: one_level.description, event_id: @event.id)
-        @eventsLevels.save
+        @event_level = EventsLevel.new(time: one_level.time, description: one_level.description, event_id: @event.id)
+        time = level[:time].to_i
+        finish_time = Time.now.utc + time.minutes
+        @event_level.save
+        @event_level.update(time: time, challenge_end_time: finish_time)
       end
-
-
-      redirect_to edit_event_path(@event)
+      redirect_to event_path(@event)
     else
       render :new
     end
