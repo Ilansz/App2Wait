@@ -9,12 +9,8 @@ const enableTime = () => {
 
   const firstChTime = (firstTime, showDiv) => {
     const finishTime = new Date(Date.parse(firstTime.dataset.finishTime));
-
     let [year, month, day, hour, minute, second] = firstTime.dataset.finishTime.split(/[- :]/)
-
     let finishSecs= parseInt(second) + parseInt(minute) * 60 + parseInt(hour) * 3600;
-
-
     setInterval(() => {
       let [syear, smonth, dayHour, smin, ssec] = new Date().toISOString().split(/[- :]/)
       let [sday, shour] = dayHour.split("T")

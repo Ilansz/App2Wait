@@ -32,7 +32,7 @@
 }
 
 .card-product .card-product-infos {
-  padding: 16px;
+  // padding: 16px;
   // word-break: break-all;
   // hyphens: auto;
   padding: 3%;
@@ -44,6 +44,7 @@
   // hyphens: auto;
   padding-top: 3%;
   padding-left: 3%;
+  padding-right: 3%;
   background-color: $white;
 }
 
@@ -140,11 +141,9 @@
 }
 .card-event {
   border-radius: 4px;
-  // box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   background-color: $white;
   padding: 5%;
   margin-bottom: 5%;
-  word-break: break-all;
   box-shadow: 0 0 2px $orange;
 }
 

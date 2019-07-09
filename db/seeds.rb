@@ -180,11 +180,11 @@ Level.create!(time: 30,
 # -------------------------
 
 Level.create!(time: 10,
-              description: "You pay a round of beer",
+              description: "Pay a round of beer",
               challenge_id: the_bill.id)
 
 Level.create!(time: 20,
-              description: "Get us nachos",
+              description: "Nachos for everybody!",
               challenge_id: the_bill.id)
 
 Level.create!(time: 30,
@@ -194,7 +194,7 @@ Level.create!(time: 30,
 # -------------------------
 
 Level.create!(time: 10,
-              description: "Do an impressive air guitare performance while entering the bar",
+              description: "Do an impressive air guitar performance while entering the bar",
               challenge_id: the_airguitare.id)
 
 Level.create!(time: 20,
@@ -202,7 +202,7 @@ Level.create!(time: 20,
               challenge_id: the_airguitare.id)
 
 Level.create!(time: 30,
-              description: "Do an amazing air guitare performance while singing along to it!",
+              description: "Do an amazing air guitar performance while singing along to it!",
               challenge_id: the_airguitare.id)
 
 # -------------------------
@@ -222,7 +222,7 @@ Level.create!(time: 30,
 # -------------------------
 
 Level.create!(time: 10,
-              description: "Arrive in a nice MoonWalk move!",
+              description: "Arrive in a nice Moonwalk move!",
               challenge_id: the_dance.id)
 
 Level.create!(time: 20,
@@ -230,7 +230,7 @@ Level.create!(time: 20,
               challenge_id: the_dance.id)
 
 Level.create!(time: 30,
-              description: "Arrive doing the chicken dance with a nice 'Cock-a-Doodle-Do!'",
+              description: "Arrive doing the chicken dance with a nice 'Cook-a-Doodle-Do!'",
               challenge_id: the_dance.id)
 
 # -------------------------
@@ -244,7 +244,7 @@ Level.create!(time: 20,
               challenge_id: the_shot.id)
 
 Level.create!(time: 30,
-              description: "You have 2 minutes... To take 3 shots!",
+              description: "You have 2 minutes... to take 3 shots!",
               challenge_id: the_shot.id)
 
 # -------------------------
@@ -253,7 +253,7 @@ Level.create!(time: 10,
               challenge_id: the_singing.id)
 
 Level.create!(time: 20,
-              description: "Sing your favorite song, but in another language...",
+              description: "Sing your favorite song, but in another language",
               challenge_id: the_singing.id)
 
 Level.create!(time: 30,
@@ -342,7 +342,7 @@ Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/uplo
 Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562148319/Axel_chocken_dance_ynzlfo.mp4',
               challenge_id: the_dance.id,
               user_id: benya.id,
-              tag: "Chicken Dance!")
+              tag: "Chicken dance!")
 Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562240474/romy_vmjdew.mp4',
               challenge_id: the_shot.id,
               user_id: mel.id,
@@ -354,7 +354,7 @@ Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/uplo
 Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562241564/moon_walk_tqj7vw.mp4',
               challenge_id: the_dance.id,
               user_id: ben.id,
-              tag: "MooOOoon Waaaalk!")
+              tag: "MooOOoon waaaalk!")
 
 
 # Cloudinary::Uploader.upload("Test_video.mp4", :resource_type => :video)
