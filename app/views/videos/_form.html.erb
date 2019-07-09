@@ -1,7 +1,7 @@
 <%= simple_form_for @video do |f| %>
 <%= f.input :tag, label: 'Description:', placeholder: "The best chicken dance ever!" %>
 <%= f.file_field :video, class: 'my-1'%>
-<%= hidden_field_tag challenge_id: @challenge.id %>
+<%= hidden_field_tag :challenge_id, @challenge.id %>
 <%= f.submit "Save the moment", class: "btn btn-primary btn-block mt-2" %>
 <% end %>
 
