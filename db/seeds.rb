@@ -180,39 +180,39 @@ Level.create!(time: 30,
 # -------------------------
 
 Level.create!(time: 10,
-              description: "Pay a round of beer",
+              description: "Pay for a round of beer",
               challenge_id: the_bill.id)
 
 Level.create!(time: 20,
-              description: "Nachos for everybody!",
+              description: "Add nachos",
               challenge_id: the_bill.id)
 
 Level.create!(time: 30,
-              description: "Time for some caviar!",
+              description: "Time for some caviar",
               challenge_id: the_bill.id)
 
 # -------------------------
 
 Level.create!(time: 10,
-              description: "Do an impressive air guitar performance while entering the bar",
+              description: "Do an impressive air guitar performance",
               challenge_id: the_airguitare.id)
 
 Level.create!(time: 20,
-              description: "Do it in a rock-n-roll style!",
+              description: "Do it in rock-n-roll style",
               challenge_id: the_airguitare.id)
 
 Level.create!(time: 30,
-              description: "Do an amazing air guitar performance while singing along to it!",
+              description: "Sing along to your performance",
               challenge_id: the_airguitare.id)
 
 # -------------------------
 
 Level.create!(time: 10,
-              description: "Type a random number and talk with the person answering for a minimum of 30 seconds",
+              description: "Call a random number and talk for 30 seconds",
               challenge_id: the_phonecall.id)
 
 Level.create!(time: 20,
-              description: "Type a random number, the person answering has to say the word 'eggplant'",
+              description: "Make the person say the word 'eggplant'",
               challenge_id: the_phonecall.id)
 
 Level.create!(time: 30,
@@ -222,7 +222,7 @@ Level.create!(time: 30,
 # -------------------------
 
 Level.create!(time: 10,
-              description: "Arrive in a nice Moonwalk move!",
+              description: "Arrive doing the moonwalk",
               challenge_id: the_dance.id)
 
 Level.create!(time: 20,
@@ -230,30 +230,30 @@ Level.create!(time: 20,
               challenge_id: the_dance.id)
 
 Level.create!(time: 30,
-              description: "Arrive doing the chicken dance with a nice 'Cook-a-Doodle-Do!'",
+              description: "Scream 'Cook-a-Doodle-Do!' to your dance",
               challenge_id: the_dance.id)
 
 # -------------------------
 
 Level.create!(time: 10,
-              description: "You have to drink one shot!",
+              description: "You have to take a shot",
               challenge_id: the_shot.id)
 
 Level.create!(time: 20,
-              description: "You have to drink one shot... WITHOUT THE HANDS!!",
+              description: "You have to take a shot... without your hands",
               challenge_id: the_shot.id)
 
 Level.create!(time: 30,
-              description: "You have 2 minutes... to take 3 shots!",
+              description: "You have 2 minutes to take 3 shots",
               challenge_id: the_shot.id)
 
 # -------------------------
 Level.create!(time: 10,
-              description: "Enter the room singing opera!",
+              description: "Enter the room singing opera",
               challenge_id: the_singing.id)
 
 Level.create!(time: 20,
-              description: "Sing your favorite song, but in another language",
+              description: "Sing your favorite song in another language",
               challenge_id: the_singing.id)
 
 Level.create!(time: 30,
@@ -263,11 +263,11 @@ Level.create!(time: 30,
 # -------------------------
 
 Level.create!(time: 10,
-              description: "You have to drink a small spoon of chilli sauce",
+              description: "You have to drink a teaspoon of chilli sauce",
               challenge_id: the_chilisauce.id)
 
 Level.create!(time: 20,
-              description: "The small spoon is not enough, it's time for a shot!",
+              description: "The spoon's not enough, it's time for a shot",
               challenge_id: the_chilisauce.id)
 
 Level.create!(time: 30,
