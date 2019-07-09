@@ -52,9 +52,10 @@
    <%= @event.events_levels.last.description %>
  </div>
 </div>
+
+<%= link_to "Set your own times", edit_event_path(@event), class: "text-warning mb-3 text-right h1", id: "event-edit" %>
 <br>
-
-
+<br>
 <%= link_to "See some previous challenges!", videos_path, class: 'btn btn-primary btn-block btn-lg' %>
 
 <div class="video-show btn btn-outline-primary btn-block mb-3">Save the moment</div>
