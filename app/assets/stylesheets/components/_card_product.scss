@@ -159,6 +159,7 @@
   background-color: $white;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   div {
     margin-right: 5px;
   }
