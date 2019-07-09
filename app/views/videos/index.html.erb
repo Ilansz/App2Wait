@@ -1,6 +1,6 @@
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon mb-3">
   <%= link_to challenges_path, class: "navbar-brand" do %>
-  <%= image_tag asset_url('logo.png') %>
+  <%= image_tag asset_url('logo_original_size.png') %>
   <% end %>
     <h5 class="text-center mt-2"><strong>Videos!</strong></h5>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,9 +11,6 @@
       <% if user_signed_in? %>
       <li class="nav-item">
         <%= link_to "Videos", videos_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Groups", groups_path, class: "nav-link" %>
       </li>
       <li class="nav-item dropdown">
         <%= cl_image_tag (current_user.photo), class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -29,7 +26,9 @@
     </ul>
   </div>
 </div>
-<%= render 'filter' %>
+<div class="container">
+  <%= render 'filter' %>
+</div>
 <div class="all-videos">
   <%= render 'videos', videos: @videos %>
 </div>
