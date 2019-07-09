@@ -40,7 +40,7 @@
     <div class="cards">
       <% @challenges.each do |challenge| %>
       <%= link_to challenge_path(challenge) do %>
-      <div class="card-category" style="background-image: url(<%=cl_image_tag challenge.photo %>)">
+      <div class="card-category" style="background-image: url(<%=cl_image_path challenge.photo %>)">
         <p> <%= challenge.name %></p>
       </div>
       <% end %>
