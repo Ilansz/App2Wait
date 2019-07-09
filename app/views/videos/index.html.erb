@@ -27,11 +27,12 @@
   </div>
 </div>
 <div class="container">
-  <%= render 'filter' %>
+  <div class="filter">
+    <p class="m-0"> Filter by challenge </p>
+    <%= render 'filter' %>
+  </div>
 </div>
-<div class="all-videos">
   <%= render 'videos', videos: @videos %>
-</div>
 <br>
 <% if @event %>
   <%= link_to "Back to challenge",@event, class: 'btn btn-primary btn-block fixed-bottom btn-lg' %>
