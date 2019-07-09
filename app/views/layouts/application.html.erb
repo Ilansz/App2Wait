@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>App2Wait</title>
-    <link rel="shortcut icon" type="image/jpg" href="<%= image_url('logo.png') %>"/>
+    <%= favicon_link_tag %>
+    <link rel="stylesheet" href="path/to/nice-select.css">
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -19,6 +20,8 @@
       <%= yield %>
       <%= javascript_include_tag 'application' %>
       <%= javascript_pack_tag 'application' %>
+      <script src="path/to/jquery.js"></script>
+      <script src="path/to/jquery.nice-select.js"></script>
       <%= yield(:after_js) %>
     </div>
     <div class="msg">
