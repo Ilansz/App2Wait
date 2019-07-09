@@ -8,7 +8,7 @@
   font-weight: bold;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   opacity:0.5;
-  border-radius: 5px
+  border-radius: 5px;
 
 }
 
@@ -39,7 +39,8 @@
 }
 
 .form-check-active label {
-  background-color: $orange;
+  background-color: $blue;
+  color: white;
   width: 100%;
   text-align:center;
   font-size: 24px;
