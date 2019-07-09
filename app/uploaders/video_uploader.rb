@@ -1,5 +1,7 @@
 class VideoUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
+  include CarrierWave::Video
+  include CarrierWave::Video::Thumbnailer
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
