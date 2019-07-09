@@ -10,3 +10,4 @@ plusMinus();
 toggleVideo();
 selector();
 timeSelector();
+
