@@ -4,7 +4,7 @@ class VideosController < ApplicationController
 
   def index
     @challenges = Challenge.joins(:videos)
-    @videos = policy_scope(Video)
+    @videos = policy_scope(Video).order(created_at: :desc)
     if params[:query].present?
       @videos = Video.where(challenge_id: params[:query])
       respond_to do |format|
