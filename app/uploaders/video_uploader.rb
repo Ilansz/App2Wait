@@ -1,7 +1,8 @@
 class VideoUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
-  # include CarrierWave::Video
-  # include CarrierWave::Video::Thumbnailer
+
+  # process encode_video: [:mp4, callbacks: { after_transcode: :set_success } ]
+  process convert: 'mp4'
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick

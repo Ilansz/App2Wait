@@ -61,6 +61,8 @@ GEM
     carrierwave-video (0.6.0)
       carrierwave
       streamio-ffmpeg
+    carrierwave-video-thumbnailer (0.1.4)
+      carrierwave
     cloudinary (1.9.1)
       aws_cf_signer
       rest-client
@@ -239,6 +241,7 @@ DEPENDENCIES
   bootsnap
   carrierwave (~> 1.2)
   carrierwave-video
+  carrierwave-video-thumbnailer
   cloudinary (~> 1.9.1)
   devise
   dotenv-rails
