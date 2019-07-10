@@ -280,6 +280,9 @@ puts "Finished generating Levels"
 
 puts "Generating Groups"
 
+axel = Group.new(name: 'Axel',
+                   remote_photo_url: 'https://res.cloudinary.com/dn4gmiobc/image/upload/v1561971341/dkimxfxzsauhsl7ijsvh.png',
+                   user: ben)
 jo = Group.new(name: 'Joe',
                    remote_photo_url: 'http://res.cloudinary.com/dn4gmiobc/image/upload/v1561978361/tjjoec9fy9yhh2qt2yup.png',
                    user: ben)
@@ -297,7 +300,7 @@ soccer = Group.new(name: 'soccer',
 france = Group.new(name: 'france',
                    remote_photo_url: 'https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg',
                    user: max)
-
+axel.save!
 jo.save!
 gabi.save!
 app2wait.save!
@@ -307,6 +310,9 @@ france.save!
 puts "Finished generating Groups"
 
 puts "Generating Groups/Users"
+
+GroupsUser.create!(group_id: axel.id, user_id: ben.id)
+GroupsUser.create!(group_id: axel.id, user_id: cuervo.id)
 
 GroupsUser.create!(group_id: jo.id, user_id: cuervo.id)
 GroupsUser.create!(group_id: jo.id, user_id: ilan.id)
@@ -335,26 +341,30 @@ puts "Finished generating Groups/Users"
 
 puts "Generating Videos"
 
-Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562147496/ben_push_up_xd76gz.mp4',
+Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562769553/ben_push_ups_uwy9v1.mp4',
               challenge_id: pushups.id,
               user_id: clara.id,
               tag: "Ben doesn't want to be late anymore!")
-Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562148319/Axel_chocken_dance_ynzlfo.mp4',
+Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562769609/romi_chicken_dance_m30asu.mp4',
               challenge_id: the_dance.id,
               user_id: benya.id,
               tag: "Chicken dance!")
-Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562240474/romy_vmjdew.mp4',
+Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562769647/bryan_shot_rjtdq7.mp4',
               challenge_id: the_shot.id,
               user_id: mel.id,
               tag: "Twas the beginning of the night...")
-Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562240754/benya_f25z8u.mp4',
+Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562769679/max_ait_guitare_hhd7ug.mp4',
               challenge_id: the_airguitare.id,
               user_id: rabea.id,
               tag: "Elvis in da house")
-Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562241564/moon_walk_tqj7vw.mp4',
-              challenge_id: the_dance.id,
+Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562769718/Benya_sc3a9w.mp4',
+              challenge_id: the_singing.id,
               user_id: ben.id,
-              tag: "MooOOoon waaaalk!")
+              tag: "He didn't want to sing!")
+Video.create!(remote_video_url: 'https://res.cloudinary.com/dyseqqsmw/video/upload/v1562769834/joe_chili_nxtcyr.mp4',
+              challenge_id: the_chilisauce.id,
+              user_id: marko.id,
+              tag: "Chiliiiiiiiiii")
 
 
 # Cloudinary::Uploader.upload("Test_video.mp4", :resource_type => :video)
