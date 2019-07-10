@@ -14,10 +14,9 @@
 
 <div class="container">
   <%= simple_form_for(@event) do |f| %>
-
-  <%= f.association :group, collection: groupes, label: false, as: :radio_buttons %>
+    <%= f.association :group, collection: groupes, label: false, as: :radio_buttons %>
     <div class="form-actions ">
-    <%= f.button :submit, value: "Start the challenge", class: "btn btn-primary btn-block", style: "font-size:24px; font-weight:bold; color:white;" %>
+    <%= f.button :submit, value: "Start the challenge", class: "btn btn-primary btn-block", id: "chosen", style: "font-size:24px; font-weight:bold; color:white;" %>
     <%= hidden_field_tag :challenge, @challenge.id %>
   </div>
   <% end %>
