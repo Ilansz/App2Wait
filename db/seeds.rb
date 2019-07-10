@@ -194,7 +194,7 @@ Level.create!(time: 30,
 # -------------------------
 
 Level.create!(time: 10,
-              description: "Do an impressive air guitar performance",
+              description: "Do an air guitar performance",
               challenge_id: the_airguitare.id)
 
 Level.create!(time: 20,

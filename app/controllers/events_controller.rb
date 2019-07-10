@@ -23,14 +23,18 @@ class EventsController < ApplicationController
       @challenge = Challenge.find(params[:challenge])
       @event.name = @challenge.name
       @event.photo = @challenge.photo.url
-      @event.group = Group.find(params[:event][:group_id])
+      if params[:event][:group_id] == ''
+        redirect_to challenge_path(@challenge), alert: 'Please select a group'
+      else
+        @event.group = Group.find(params[:event][:group_id])
+      end
       @event.save
     else
       redirect_to challenges_path
-  end
+    end
 
     authorize @event
-    if @event.save!
+    if @event.save
       @challenge.levels.sort_by(&:time).each do |level|
         one_level = Level.find(level.id)
         @event_level = EventsLevel.new(time: one_level.time, description: one_level.description, event_id: @event.id)
@@ -40,10 +44,11 @@ class EventsController < ApplicationController
         @event_level.update(time: time, challenge_end_time: finish_time)
       end
       redirect_to event_path(@event)
-    mail = EventMailer.send_emails(@event)
+      mail = EventMailer.send_emails(@event)
     # mail.deliver_now
     else
       render :new
+      # redirect_to challenges_path(@challenge)
     end
   end
 

@@ -3,7 +3,7 @@ class VideosController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
   def index
-    @challenges = Challenge.joins(:videos)
+    @challenges = Challenge.joins(:videos).uniq
     @videos = policy_scope(Video).order(created_at: :desc)
     if params[:query].present?
       @videos = Video.where(challenge_id: params[:query])
@@ -33,10 +33,14 @@ class VideosController < ApplicationController
     @video = Video.new(video_params)
     @video.user = current_user
     @challenge = Challenge.find(params[:challenge_id])
+    @event = current_user.events.last
     @video.challenge = @challenge
     authorize @video
-    @video.save
-    redirect_to videos_path
+    if @video.save
+      redirect_to videos_path
+    else
+      redirect_to event_path(@event), alert: "Please add a description"
+    end
   end
 
   def destroy
