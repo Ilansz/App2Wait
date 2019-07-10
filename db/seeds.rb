@@ -280,6 +280,9 @@ puts "Finished generating Levels"
 
 puts "Generating Groups"
 
+axel = Group.new(name: 'Axel',
+                   remote_photo_url: 'https://res.cloudinary.com/dn4gmiobc/image/upload/v1561971341/dkimxfxzsauhsl7ijsvh.png',
+                   user: ben)
 jo = Group.new(name: 'Joe',
                    remote_photo_url: 'http://res.cloudinary.com/dn4gmiobc/image/upload/v1561978361/tjjoec9fy9yhh2qt2yup.png',
                    user: ben)
@@ -297,7 +300,7 @@ soccer = Group.new(name: 'soccer',
 france = Group.new(name: 'france',
                    remote_photo_url: 'https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg',
                    user: max)
-
+axel.save!
 jo.save!
 gabi.save!
 app2wait.save!
@@ -307,6 +310,9 @@ france.save!
 puts "Finished generating Groups"
 
 puts "Generating Groups/Users"
+
+GroupsUser.create!(group_id: axel.id, user_id: ben.id)
+GroupsUser.create!(group_id: axel.id, user_id: cuervo.id)
 
 GroupsUser.create!(group_id: jo.id, user_id: cuervo.id)
 GroupsUser.create!(group_id: jo.id, user_id: ilan.id)
