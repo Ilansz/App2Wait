@@ -30,22 +30,22 @@
     <img src="https://cdn.dribbble.com/users/1498470/screenshots/4498386/hourglass.gif" alt="Time" id="time-gif">
   </div>
   <div class="transition"></div>
-  <div class="container mt-2">
-    <div class="card-product my-4 disabled" id="first-level" data-finish-time="<%= @event.events_levels.first.challenge_end_time %>" data-current-time="<%= Time.now.utc %>">
+  <div class="container mt-1">
+    <div class="card-product mt-2 mb-2 disabled" id="first-level" data-finish-time="<%= @event.events_levels.first.challenge_end_time %>" data-current-time="<%= Time.now.utc %>">
       <div class="card-time firsttimer" style="padding-top: 7%; font-size: 30px;">
       </div>
       <div class="card-product-infos">
        <h4><%= @event.events_levels.first.description %></h4>
      </div>
    </div>
-   <div class="card-product my-4 disabled" id="second-level" data-finish-time="<%= @event.events_levels.second.challenge_end_time %>" data-current-time="<%= Time.now.utc %>">
+   <div class="card-product my-2 disabled" id="second-level" data-finish-time="<%= @event.events_levels.second.challenge_end_time %>" data-current-time="<%= Time.now.utc %>">
     <div class="card-time secondtimer" style="padding-top: 7%; font-size: 30px;">
     </div>
     <div class="card-product-infos">
      <h4><%= @event.events_levels.second.description %></h4>
    </div>
  </div>
- <div class="card-product my-4 disabled" id="last-level" data-finish-time="<%= @event.events_levels.last.challenge_end_time %>" data-current-time="<%= Time.now.utc %>">
+ <div class="card-product mt-2 mb-3 disabled" id="last-level" data-finish-time="<%= @event.events_levels.last.challenge_end_time %>" data-current-time="<%= Time.now.utc %>">
   <div class="card-time lasttimer" style="padding-top: 7%; font-size: 30px;">
   </div>
   <div class="card-product-infos">
@@ -53,7 +53,7 @@
  </div>
 </div>
 
-<%= link_to "Set your own times", edit_event_path(@event), class: "text-warning mb-3 text-center h1", id: "event-edit" %>
+ <p class="text-center" style="margin-bottom: -8%;"><%= link_to "Set your own times", edit_event_path(@event), class: "text-warning mb-3 text-center h1", id: "event-edit" %></p>
 <br>
 <br>
 <%= link_to "Videos of challenges", videos_path, class: 'btn btn-primary btn-block btn-lg font-weight-bold' %>
@@ -64,10 +64,8 @@
 <div class="container d-none" id="video_new">
 <%= render 'videos/form' %>
 </div>
-<br>
-<br>
 
-<%= link_to "Cancel Challenge", event_path(@event), method: :delete, class: 'text-secondary' %>
+<%#= link_to "Cancel Challenge", event_path(@event), method: :delete, class: 'text-secondary' %>
 
 
 <%= content_for :after_js do  %>
