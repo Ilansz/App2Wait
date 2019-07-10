@@ -13,9 +13,9 @@
         <%= link_to "Videos", videos_path, class: "nav-links" %>
       </li>
       <% if current_user.events.last %>
-      <% @event = Event.find(current_user.events.last.id) %>
+      <% @event_navbar = Event.find(current_user.events.last.id) %>
       <li class="nav-item">
-        <%= link_to "Last challenge", @event, class: "nav-links" %>
+        <%= link_to "Last challenge", @event_navbar, class: "nav-links" %>
       </li>
       <% end %>
       <li class="nav-item dropdown">
