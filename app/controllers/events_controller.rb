@@ -44,6 +44,10 @@ class EventsController < ApplicationController
         @event_level.update(time: time, challenge_end_time: finish_time)
       end
       redirect_to event_path(@event)
+      mail = EventMailer.send_emails(@event)
+    # mail.deliver_now
+    else
+      render :new
       # redirect_to challenges_path(@challenge)
     end
   end
@@ -64,8 +68,6 @@ class EventsController < ApplicationController
         render :edit and return
       end
     end
-    mail = EventMailer.with(event: @event).launched
-    mail.deliver_now
     redirect_to event_path(@event)
   end
 

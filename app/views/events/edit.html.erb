@@ -12,7 +12,7 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Videos", videos_path, class: "nav-link" %>
+          <%= link_to "Videos", videos_path, class: "nav-links" %>
         </li>
         <li class="nav-item dropdown">
           <%= cl_image_tag (current_user.photo), class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -30,13 +30,11 @@
 </div>
 
 <div class="container mt-2">
-<!--   <div class="text-center m-3">
-    <h3> What will <%#= @event.group.name %> do? </h3>
-  </div> -->
-    <%= render 'form_edit' %>
-    <div class="edit-disclaimer mt-3">
-      <h5> All times are in minutes * </h5>
+
+    <div class="edit-disclaimer mt-2">
+      <h6 class="text-right"> All times are in minutes * </h6>
     </div>
+    <%= render 'form_edit' %>
 </div>
 <br>
-<%= link_to "Back to challenge", @event, class: "text-warning mb-3 text-right h1", id: "event-edit" %>
+<%= link_to "Back to challenge", @event, class: "text-warning mb-3 text-center h1", id: "event-edit" %>
