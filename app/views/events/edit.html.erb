@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon mb-3">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon mb-2">
   <%= link_to challenges_path, class: "navbar-brand" do %>
     <%= image_tag asset_url('logo_original_size.png') %>
     <% end %>
@@ -29,12 +29,10 @@
   </div>
 </div>
 
-<div class="container mt-2">
+<div class="container">
 
-    <div class="edit-disclaimer mt-2">
-      <h6 class="text-right"> All times are in minutes * </h6>
-    </div>
     <%= render 'form_edit' %>
 </div>
-<br>
-<%= link_to "Back to challenge", @event, class: "text-warning mb-3 text-center h1", id: "event-edit" %>
+    <div class="edit-disclaimer mt-2">
+      <h6> All times are in minutes * </h6>
+    </div>
