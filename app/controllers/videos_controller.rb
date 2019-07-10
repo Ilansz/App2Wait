@@ -3,7 +3,7 @@ class VideosController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
   def index
-    @challenges = Challenge.joins(:videos)
+    @challenges = Challenge.joins(:videos).uniq
     @videos = policy_scope(Video).order(created_at: :desc)
     if params[:query].present?
       @videos = Video.where(challenge_id: params[:query])
