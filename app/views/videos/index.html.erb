@@ -27,7 +27,10 @@
   </div>
 </div>
 <div class="container">
-  <%= render 'filter' %>
+  <div class="filter">
+    <p class="m-0"> Filter by challenge </p>
+    <%= render 'filter' %>
+  </div>
 </div>
 <div class="all-videos">
   <%= render 'videos', videos: @videos %>
