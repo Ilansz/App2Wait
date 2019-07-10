@@ -4,8 +4,8 @@ class EventMailer < ApplicationMailer
   #
   #   en.event_mailer.launched.subject
   #
-  def launched
-    @event = params[:event]
+  def self.send_emails(event)
+    @event = event
     @group = Group.find(@event.group.id)
 
     emails = []
@@ -15,8 +15,15 @@ class EventMailer < ApplicationMailer
     end
 
     emails.each do |email|
-      mail to: email, subject: "You've been challenged on App2Wait!"
+      # mail to: email, subject: "You've been challenged on App2Wait!"
+      launched(email, @group, @event).deliver_now
     end
     # raise
+  end
+
+  def launched(email, group, event)
+    @event = event
+    @group = group
+    mail to: email, subject: "You've been challenged on App2Wait"
   end
 end
