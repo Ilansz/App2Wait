@@ -17,29 +17,32 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(group_params)
     @group.user = current_user
-    @group.save
-    if !params[:users].nil?
+    if @group.save
+      if !params[:users].nil?
 
-    # iterate through the users to create a group user for every single username
+        # iterate through the users to create a group user for every single username
+        params[:users].each do |userid|
+          user = User.find(userid)
+          # raise
+          GroupsUser.create!(user: user, group: @group)
+        end
+      end
+      GroupsUser.create!(user: current_user, group: @group)
+      authorize @group
+      redirect_to challenges_path
+    else
+      render :new
+    end
+  end
+
+def edit
+end
+
+def update
+  @group.update(group_params)
+  if !params[:users].nil?
     params[:users].each do |userid|
       user = User.find(userid)
-      # raise
-      GroupsUser.create!(user: user, group: @group)
-    end
-    end
-    GroupsUser.create!(user: current_user, group: @group)
-    authorize @group
-    redirect_to challenges_path
-  end
-
-  def edit
-  end
-
-  def update
-    @group.update(group_params)
-      if !params[:users].nil?
-      params[:users].each do |userid|
-        user = User.find(userid)
 
         # raise
         GroupsUser.create!(user: user, group: @group)
